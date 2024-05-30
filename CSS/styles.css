@@ -1,4 +1,4 @@
-. {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -8,5 +8,108 @@
   box-sizing: border-box;
 }
 :root {
-  --color-primary: #ffff;
+  --color-primary: #603b2a;
+  --color-bg-2: #a1665c;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-light: rgba(255, 255, 255, 0.7);
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+  --container-width-cm: 94%;
+
+  --transition: all 400s ease;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-primary);
+  line-height: 1.7;
+  color: var(--color-white);
+}
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.3rem;
+}
+a {
+  color: var(--color-white);
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.btn {
+  display: inline-block;
+  background: var(--color-white);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+  transition: var(--transition);
+}
+.btn-primary {
+  background: #000;
+  color: var(--color-white);
+}
+
+/* =================== NAVBAR =================== */
+nav {
+  background: transparent;
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+.nav__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav button {
+  display: none;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.nav__menu a {
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.nav__menu:hover {
+  color: var(--color-primary);
 }
