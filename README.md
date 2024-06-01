@@ -1,9 +1,6 @@
 # TSA-Website-FrontEnd
 This is the frontend development repository for the Technologies Students Association's Website 
 
-# TSA-Website-FrontEnd
-This is the frontend development repository for the Technologies Students Association's Website 
-
 # Github contribution guideline
 
 The main branch is protected,  to push your changes you need to follow the steps below:
