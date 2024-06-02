@@ -1,6 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
-    background-color: linear-gradient(90deg, red, black);
+    background-color: #603509;
     font-size: 1.1rem;
     color: var(--color-white);
     transition: 5s ease-in-out;
@@ -15,29 +15,28 @@ a {
 
 .controls {
     position: fixed;
-    top: 50%;
-    right: 3%;
-    z-index: 10;
+    top: 0;
+    right: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-50%);
-    opacity: 0;
+    flex-direction: row;
+    background-color: var(--color-grey-4);
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: var(--box-shadow-1);
 }
 
 .control {
     padding: 1rem;
     background-color: var(--color-grey-4);
     cursor: pointer;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
+    border-radius: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-block: 1rem;
-    box-shadow: var(--box-shadow-1);
+    margin-inline: 1rem;
+    box-shadow: none;
     text-align: center;
+    width: 150px;
+    justify-content: space-between;
 }
 
 .control i {
@@ -46,33 +45,18 @@ a {
     pointer-events: none;
 }
 
-.control:hover i {
+.control:hover i,
+.control:hover .text {
     color: var(--color-white) !important;
 }
 
-.control {
-    flex-direction: row-reverse;
-    position: relative;
-    transition: all 0.4s ease-in-out;
-}
-
-.control:hover .hover-items {
-    display: block;
-    transition: all 0.4s ease-in-out;
-}
-
-.hoverit {
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    right: 115%;
-    z-index: 100;
-    color: var(--color-grey-3);
-    font-size: 13px;
-    white-space: nowrap;
-    transition: all 0.4s ease-in-out;
+.hover-items {
     display: none;
-    font-family: "Press Start 2P", cursive;
+}
+
+.text {
+    color: var(--color-grey-2);
+    margin-left: 10px;
 }
 
 .socials {
@@ -132,6 +116,9 @@ a {
 
 .main-title {
     text-align: center;
+    margin-top: 100px; 
+    line-height: 1.2; 
+    margin-bottom: 5px;
 }
 
 .main-title h2 {
@@ -164,16 +151,112 @@ a {
     justify-content: center;
 }
 
-.contact-content-con .left-contact .contact-info .contact-item {
-    padding-block: 1rem;
+.left-contact {
+    flex: 1;
 }
-.contact-content-con .left-contact .contact-info{
+
+.contact-info {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.section {
-    background-color: 	#603509;
+.contact-item {
+    padding-block: 1rem;
+}
+
+.right-contact {
+    flex: 1;
+    padding-left: 2rem; /* Adjust spacing between left and right contact sections */
+}
+
+.contact-form {
+    background-color: #fff; /* Set background color for the form */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-secondary-hover);
+}
+/* Contact Form Styling */
+.contact-form {
+    background-color: #f5f5f5; /* Lighter gray background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Dark gray label text */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px; /* Larger font size */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Green submit button */
+    color: #fff;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
