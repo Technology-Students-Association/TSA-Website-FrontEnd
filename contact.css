@@ -23,6 +23,11 @@ a {
     z-index: 1000;
     padding: 1rem;
     box-shadow: var(--box-shadow-1);
+    transition: background-color 0.3s ease;
+}
+
+.scrolled {
+    background-color: #444; /* Darker background color when scrolled */
 }
 
 .control {
@@ -146,117 +151,67 @@ a {
 
 .contact-content-con {
     display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 33px 5rem;
+    padding: 20px;
+    align-items: center;
     justify-content: center;
 }
 
-.left-contact {
-    flex: 1;
+.contact-content-con .left-contact .contact-info .contact-item {
+    padding-block: 1rem;
 }
 
-.contact-info {
+.contact-content-con .left-contact .contact-info {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.contact-item {
-    padding-block: 1rem;
-}
-
-.right-contact {
-    flex: 1;
-    padding-left: 2rem; /* Adjust spacing between left and right contact sections */
+    color: white;
 }
 
 .contact-form {
-    background-color: #fff; /* Set background color for the form */
+    background-color: #333;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
+    color: white;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form-group textarea {
-    resize: vertical;
+    border: none;
+    border-radius: 4px;
+    background-color: #555;
+    color: white;
 }
 
 .submit-btn {
-    display: inline-block;
-    background-color: var(--color-secondary);
-    color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    background-color: #777;
+    color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: var(--color-secondary-hover);
-}
-/* Contact Form Styling */
-.contact-form {
-    background-color: #f5f5f5; /* Lighter gray background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #999;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold; /* Bold labels */
-    color: #555; /* Dark gray label text */
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px; /* Increased padding */
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 5px;
-    font-size: 16px; /* Larger font size */
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.submit-btn {
-    display: inline-block;
-    background-color: #4CAF50; /* Green submit button */
-    color: #fff;
-    padding: 12px 24px; /* Increased padding */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px; /* Larger font size */
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+.section {
+    background-color: #603509;
+    color: white;
 }

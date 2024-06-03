@@ -22,7 +22,7 @@
 </head>
 
 <body id="main-page" class="main-contents" onload="change()">
-    <div class="controls">
+    <div id="navbar" class="controls">
         <div class="control control-1 active-btn" data-id="main">
             <i class="fa fa-home" aria-hidden="true"></i>
             <span class="text">Home</span>
@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <!-- contact -->
+    <!-- contact section -->
     <section class="section sec-4 contact animate__fadeIn" id="contact">
         <div class="contact-container">
             <div class="main-title">
@@ -64,7 +64,7 @@
                         </div>
                         <div class="contact-item">
                             <div class="icon">
-                                <i class="fas fa-envelope"></i> Email
+                                <i class="fas fa-map-marker-alt"></i> Email
                             </div>
                             <a>technologystudentsmoi@gmail.com</a>
                         </div>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="right-contact">
-                    <form class="contact-form" action="#" method="post">
+                    <form class="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -94,9 +94,9 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="submit-btn">Send</button>
                     </form>
                 </div>
             </div>
@@ -116,24 +116,10 @@
             </a>
         </div>
     </section>
-    <div class="settings">
-        <i class="fa-solid fa-gear settings-icon"></i>
-        <div class="maincolor-div">
-            <div class="colordiv">
-                <div class="circle" style="background-color:#FF6666;" data-color="#FF6666"></div>
-                <div class="circle" style="background-color:#66FF99;" data-color="#66FF99"></div>
-                <div class="circle" style="background-color:#FF99CC;" data-color="#FF99CC"></div>
-                <div class="circle" style="background-color:#6699FF;" data-color="#6699FF"></div>
-                <div class="circle" style="background-color:#A0522D;" data-color="#A0522D"></div>
-                <div class="circle" style="background-color:#FAD02E;" data-color="#FAD02E"></div>
-                <div class="circle" style="background-color:#c02942;" data-color="#c02942"></div>
-                <div class="circle" style="background-color:#CC66FF;" data-color="#CC66FF"></div>
-            </div>
-        </div>
-    </div>
-    <div class="theme-btn"></div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="contact.js" async="false"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
