@@ -5,28 +5,27 @@ This is the frontend development repository for the Technologies Students Associ
 
 The main branch is protected,  to push your changes you need to follow the steps below:
 1. Clone the repository.
-   - First, clone the repository to your local machine using the following command.
-   - git clone <repository_url>
+   - First, clone the repository to your local machine.
+   -  Use the following command : git clone <repository_url>
    - Replace <repository_url> with the actual URL of the repository.
 
 3. Create a new branch.
    - Next, create a new branch for the feature or page you’re working on.
-   - Give it a descriptive name related to the task. For example:
-   - git checkout -b feature/my-awesome-feature
+   - Give it a descriptive name related to the task.
+   - For example: git checkout -b feature/my-awesome-feature
    - Replace feature/my-awesome-feature with your chosen branch name.
 
 4. Make changes and commit.
    - Make your changes to the code, add new files, or modify existing ones.
    - Once you’re satisfied, stage your changes and commit them:
-   - Use the following command:
+   - Use the following commands:
    - git add .
    - git commit -m "Add feature X"
    - Replace "Add feature X"  with a meaningful commit message.
 
 5. Push changes to your branch.
    - Push your changes to the branch you created:
-   - Use the following command:
-   - git push origin feature/my-awesome-feature
+   - Use the following command: git push origin feature/my-awesome-feature
    - Replace feature/my-awesome-feature with your chosen branch name.
 
 6. Create a pull request for your changes to be added to the main branch.
