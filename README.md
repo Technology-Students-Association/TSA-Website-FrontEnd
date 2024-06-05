@@ -21,7 +21,7 @@ The main branch is protected,  to push your changes you need to follow the steps
    Use the following command:
    git add .
    git commit -m "Add feature X"
-   Replace "Add feature X"  with a meaningful commit messag.
+   Replace "Add feature X"  with a meaningful commit message.
 
 4. Push changes to your branch.
    Push your changes to the branch you created:
