@@ -20,14 +20,16 @@ The main branch is protected,  to push your changes you need to follow the steps
    Once you’re satisfied, stage your changes and commit them:
    Use the following command:
    git add .
-   git commit -m "Add feature X"  (Replace with a meaningful commit message)
+   git commit -m "Add feature X"
+   Replace "Add feature X"  with a meaningful commit messag.
 
-4. Push changes to your branch.
+5. Push changes to your branch.
    Push your changes to the branch you created:
    Use the following command:
    git push origin feature/my-awesome-feature
- 
-5. Create a pull request for your changes to be added to the main branch.
+   Replace feature/my-awesome-feature with your chosen branch name.
+
+6. Create a pull request for your changes to be added to the main branch.
    Go to the repository on GitHub.
    Click on the “Pull Requests” tab.
    Click the “New Pull Request” button.
