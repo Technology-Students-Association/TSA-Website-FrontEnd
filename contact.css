@@ -1,6 +1,22 @@
+:root {
+    --color-primary: #f2f2fc;
+    --color-bg2: #c26814d2;
+    --color-bg1: #bba065;
+    --color-white: #fff;
+    --color-bg: #a0720e;
+    --color-black: #000;
+    --color-light: rgba(255, 255, 255, 0.7);
+  
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-cm: 94%;
+  
+    --transition: all 400s ease;
+  }
+
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #603509;
+    background-color: var(--color-primary);
     font-size: 1.1rem;
     color: var(--color-white);
     transition: 5s ease-in-out;
@@ -19,7 +35,7 @@ a {
     right: 0;
     display: flex;
     flex-direction: row;
-    background-color: var(--color-grey-4);
+    background-color: var(--color-bg2);
     z-index: 1000;
     padding: 1rem;
     box-shadow: var(--box-shadow-1);
@@ -27,12 +43,12 @@ a {
 }
 
 .scrolled {
-    background-color: #444; /* change color when scrolled */
+    background-color: var(--color-bg); /* change color when scrolled */
 }
 
 .control {
     padding: 1rem;
-    background-color: var(--color-grey-4);
+    /* background-color: var(--color-bg2); */
     cursor: pointer;
     border-radius: 0;
     display: flex;
@@ -167,14 +183,14 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: white;
+    color: var(--color-bg2);
 }
 
 .contact-form {
     background-color: #333;
     padding: 50px;
     border-radius: 8px;
-    color: white;
+    color: var(--color-bg2);
 }
 
 .form-group {
@@ -184,7 +200,7 @@ a {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: white;
+    color: var(--color-bg2);
 }
 
 .form-group input,
@@ -194,7 +210,7 @@ a {
     border: none;
     border-radius: 4px;
     background-color: #555;
-    color: white;
+    color: var(--color-bg2);
 }
 
 .submit-btn {
@@ -202,7 +218,7 @@ a {
     border: none;
     border-radius: 4px;
     background-color: green;
-    color: white;
+    color: var(--color-bg2);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -212,6 +228,6 @@ a {
 }
 
 .section {
-    background-color: #603509;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-bg2);
 }
