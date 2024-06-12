@@ -1,0 +1,13 @@
+.about__archivements {
+  margin-top: 3rem;
+}
+
+.about__achivements-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 5rem;
+}
+
+.about__archivements-right p {
+  margin: 1.6rem 0 2.5rem;
+}

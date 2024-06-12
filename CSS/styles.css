@@ -10,10 +10,10 @@
 
 :root {
   --color-primary: #f2f2fc;
-  --color-bg2: #c26814d2;
-  --color-bg1: #bba065;
+  --color-bg2: #fdf9ff;
+  --color-bg1: #f8ece6;
   --color-white: #fff;
-  --color-bg: #a0720e;
+  --color-bg: #f2f2fc;
   --color-black: #000;
   --color-light: rgba(255, 255, 255, 0.7);
 
@@ -61,12 +61,12 @@ h4 {
   font-size: 1.3rem;
 }
 a {
-  color: var(--color-white);
+  color: #692d17;
 }
 img {
   width: 100%;
   display: block;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .btn {
   display: inline-block;
@@ -83,7 +83,7 @@ img {
   transition: var(--transition);
 }
 .btn-primary {
-  background: #000;
+  background: #692d17;
   color: var(--color-white);
 }
 
@@ -96,9 +96,16 @@ nav {
   top: 0;
   z-index: 11;
 }
+#open-menu-btn {
+  color: #692d17;
+}
+
+#close-menu-btn {
+  color: #692d17;
+}
 /* change navbar style on scroll using javascipt  */
 .window-scroll {
-  background: var(--color-primary);
+  background: #fdf9ff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .nav__container {
@@ -109,6 +116,7 @@ nav {
 }
 nav button {
   display: none;
+  color: #692d17;
 }
 .nav__menu {
   display: flex;
@@ -153,6 +161,7 @@ header {
 .categories h1 {
   line-height: 1;
   margin-bottom: 3rem;
+  color: #692d17;
 }
 .categories__left {
   margin-right: 4rem;
@@ -263,20 +272,16 @@ header {
   text-align: center;
 }
 .testimonial__body {
-  background: var(--color-primary);
+  background: #692d17;
   padding: 2rem;
   margin-top: 3rem;
   position: relative;
+  border-radius: 10px;
 }
 .testimonial__body::before {
   content: "";
   display: block;
-  background: linear-gradient(
-    -135deg,
-    transparent,
-    var(--color-primary),
-    var(--color-primary)
-  );
+  background: linear-gradient(-90deg, transparent, #f8ece6, #f8ece6);
   width: 3rem;
   height: 3rem;
   position: absolute;
@@ -319,7 +324,7 @@ footer ul li a:hover {
   text-align: center;
   margin-top: 4rem;
   padding: 1.2rem 0;
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(2, 2, 2);
 }
 /* ==================== MEDIA QUERIES (TABLETS)================= */
 @media screen and (max-width: 1024px) {
