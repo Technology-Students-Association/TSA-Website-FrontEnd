@@ -1,20 +1,22 @@
 :root {
-    --color-primary: #f2f2fc;
-    --color-bg2: #c26814d2;
-    --color-bg1: #bba065;
-    --color-white: #fff;
-    --color-bg: #a0720e;
-    --color-black: #000;
-    --color-light: rgba(255, 255, 255, 0.7);
-    --container-width-lg: 80%;
-    --container-width-md: 90%;
-    --container-width-cm: 94%;
-    --transition: all 400s ease;
+  --color-primary: #f2f2fc;
+  --color-bg2: #fdf9ff;
+  --color-bg1: #f8ece6;
+  --color-white: #fff;
+  --color-bg: #f2f2fc;
+  --color-black: #000;
+  --color-light: rgba(255, 255, 255, 0.7);
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+  --container-width-cm: 94%;
+
+  --transition: all 400s ease;
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
     font-size: 1.1rem;
     color: var(--color-white);
     transition: 5s ease-in-out;
