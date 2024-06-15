@@ -71,6 +71,20 @@ img {
   display: block;
   /* object-fit: cover; */
 }
+a h4 {
+  font-family: "Dancing Script", cursive;
+  font-size: xx-large;
+}
+img {
+  width: 100%;
+  display: block;
+  /* object-fit: cover; */
+}
+.Logo {
+  height: 53px;
+  width: 53px;
+  border-radius: 100%;
+}
 .btn {
   display: inline-block;
   background: var(--color-white);
