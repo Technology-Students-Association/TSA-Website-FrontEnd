@@ -210,10 +210,10 @@ header {
   background: var(--color-warning);
 }
 .category:nth-child(4) .category__icon {
-  background: rgb(132, 0, 255);
+  background: var(--color-success);
 }
 .category:nth-child(5) .category__icon {
-  background: rgb(243, 3, 83);
+  background: var(--color-bg1);
 }
 .category:nth-child(6) .category__icon {
   background: var(--color-success);
@@ -299,7 +299,7 @@ header {
 .testimonial__body::before {
   content: "";
   display: block;
-  background: linear-gradient(-90deg, transparent, #f8ece6, #f8ece6);
+  background: linear-gradient(-1deg, transparent, #692d17, #692d17);
   width: 3rem;
   height: 3rem;
   position: absolute;
