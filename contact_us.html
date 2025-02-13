@@ -17,114 +17,193 @@
 </head>
 
 <body id="main-page" class="main-contents">
-    <div id="navbar" class="controls">
-        <div class="control control-1 active-btn" data-id="main">
-            <i class="fa fa-home" aria-hidden="true"></i>
-            <span class="text">Home</span>
-        </div>
-        <div class="control control-2" data-id="about">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <span class="text">About Us</span>
-        </div>
-        <div class="control control-3" data-id="portfolio">
-            <i class="fa fa-briefcase" aria-hidden="true"></i>
-            <span class="text">Gallery</span>
-        </div>
-        <div class="control control-5" data-id="contact">
-            <i class="fa fa-envelope-open" aria-hidden="true"></i>
-            <span class="text">Contact Us</span>
-        </div>
-    </div>
-
-    <section class="section sec-4 contact animate__fadeIn" id="contact">
-        <div class="contact-container">
-            <div class="main-title">
-                <h2>Contact <span>Us</span></h2>
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>TSA Website</title>
+          <link rel="stylesheet" href="CSS/styles.css" />
+          <link rel="stylesheet" href="CSS/About.css" />
+          <!-- ================ICON SCOUNT ============== -->
+          <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+          />
+      
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+          />
+        </head>
+        <body>
+          <nav>
+            <div class="container nav__container">
+              <a href="index.html"><h4>TSA</h4></a>
+              <ul class="nav__menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="tsa-gallery/tsa-gallery/index.html">Gallery</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+              </ul>
+              <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+              <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
             </div>
-            <div class="contact-content-con">
-                <div class="left-contact">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <img src="images/TSA logo.jpg" alt="TSA Logo" class="contact-logo">
-                            <div class="contact-details">
-                                <div class="icon">
-                                    <i class="fa fa-user" aria-hidden="true"></i> Name
-                                </div>
-                                <p>TSA Moi University</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7683566401715!2d35.29128607447508!3d0.28674036407144937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1780f5ec5a9f9d87%3A0x159cb96600e6f677!2sMoi%20University%20Main%20Campus%20Eldoret!5e0!3m2!1sen!2ske!4v1718264385586!5m2!1sen!2ske" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="contact-details">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i> Location
-                                </div>
-                                <p>Uasin Ginshu, Kenya</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <img src="images/GMAIL icon with af8d77d3-8d87-46d6-a178-8bb744d78dc3.png" alt=" " class="contact-logo">
-                            <div class="contact-details">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i> Email
-                                </div>
-                                <p>technologystudentsmoi@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <img src="images/Phone call icon 9b19795b-30ea-412e-b609-de232e9eb656.png" alt=" " class="contact-logo">
-                            <div class="contact-details">
-                                <div class="icon">
-                                    <i class="fa fa-phone" aria-hidden="true"></i> Tel
-                                </div>
-                                <p>053-43620</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <img src="images/fax icon with t 80bc213d-7dd6-43df-b23b-8c0752c8d7d4.png" alt=" " class="contact-logo">
-                            <div class="contact-details">
-                                <div class="icon">
-                                    <i class="fa fa-fax" aria-hidden="true"></i> Fax
-                                </div>
-                                <p>053-43292</p>
-                            </div>
-                        </div>
+          </nav>
+          <!-- =======================================END OF NAV BAR ========================= -->
+          <section class="contact section" id="contact">
+            <div class="container">
+              <div class="row">
+                <div class="section-title padd-15">
+                  <h2>Contact Me</h2>
+                </div>
+              </div>
+              <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
+              <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+              <div class="row">
+                <!--=========Contact info item start=========-->
+                <div class="container-info-item padd-15">
+                  <div class="icon"><i class="fa fa-phone"></i></div>
+                  <h4>Call Us Me</h4>
+                  <p>+254 784594734</p>
+                </div>
+                <!--=========Contact info item End=========-->
+                <!--=========Contact info item start=========-->
+                <div class="container-info-item padd-15">
+                  <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                  <h4>Office</h4>
+                  <p>Nairobi</p>
+                </div>
+                <!--=========Contact info item End=========-->
+                <!--=========Contact info item start=========-->
+                <div class="container-info-item padd-15">
+                  <div class="icon"><i class="fa fa-envelope"></i></div>
+                  <h4>Email</h4>
+                  <p>lewismachabe@gmail.com</p>
+                </div>
+                <!--=========Contact info item End=========-->
+                <!--=========Contact info item start=========-->
+                <div class="container-info-item padd-15">
+                  <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                  <h4>Website</h4>
+                  <p><a href=" https://12492sachet.github.io/UrbanStyleHub/">UrbanStyleHub</a></p>
+                </div>
+                <!--=========Contact info item End=========-->
+    
+              </div>
+              <h3 class="contact-title">SEND ME US EMAIL</h3>
+              <h4 class="contact-sub-title ">WE ARE VERY RESPOSIVE TO MESSAGES</h4>
+              <!-- ======Contact Form=======-->
+              <div class="row">
+                <div class="contact-form ">
+                  <div class="row">
+                    <div class="form-item col-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="Name" placeholder="name">
+                      </div>
                     </div>
+                    <div class="form-item ">
+                      <div class="form-group">
+                        <input type="email" class="form-control" 
+                        id="Email" placeholder="Email">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-item col-12">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="Subject" placeholder="Subject">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-item col-12 padd-15">
+                      <div class="form-group">
+                        <textarea name="" class="form-control" id="Message" placeholder="Message" ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-item col-12 padd-15">
+                      <button type="submit" class="btn" onClick="sendMail()">Send Message</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="right-contact">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send</button>
-                    </form>
-                </div>
+              </div>
+    
+              <div class="row">
             </div>
+           </section>
+      
+    <footer>
+        <div class="container footer__container">
+          <div class="footer__1">
+            <a href="index.html" class="footer__logo"><h4>TSA</h4></a>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+              blanditiis velit minus tempore dignissimos id, sapiente alias
+              corporis magni accusamus!
+            </p>
+          </div>
+          <div class="footer__2">
+            <h4>Permalinks</h4>
+            <ul class="permalinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="ContactUs.html">Contact Us</a></li>
+              <li><a href="Gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer__3">
+            <h4>Primacy</h4>
+            <ul class="Primacy">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms and Condition</a></li>
+              <li><a href="#">Refund Policy</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer__4">
+            <h4>Contact Us</h4>
+            <div>
+              <p>+254700000000</p>
+              <p>tsa@gmail.com</p>
+            </div>
+            <ul class="footer__socials">
+              <li>
+                <a href="https://www.facebook.com/moiunitsa/"
+                  ><i class="uil uil-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh"
+                  ><i class="uil uil-instagram-alt"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09"
+                  ><i class="uil uil-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/technology-students-association-835161232"
+                  ><i class="uil uil-linkedin-alt"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/technology-students-association-835161232" target="_blank">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09" target="_blank">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh" target="_blank">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.facebook.com/moiunitsa/" target="_blank">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
+        <div class="footer__copyright">
+          <small>Copyright &copy; TSA 2024</small>
         </div>
-    </section>
+      </footer>
 
     <!-- JavaScript -->
     <script src="contact.js"></script>
