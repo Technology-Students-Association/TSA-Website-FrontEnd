@@ -9,16 +9,17 @@
 }
 
 :root {
-  --color-primary: #f2f2fc;
+  --color-primary: #c60d0a;
   --color-bg2: #fdf9ff;
   --color-bg1: #f8ece6;
-  --color-white: #fff;
+  --color-white: #b91b1b;
   --color-bg: #f2f2fc;
   --color-black: #000;
   --color-light: rgba(255, 255, 255, 0.7);
   --color-success: #00bf8e;
   --color-danger: #f75842;
   --color-warning: #f7c94b;
+  --color-location: #000;
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
@@ -28,7 +29,7 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg1);
   line-height: 1.7;
   color: var(--color-black);
 }
@@ -100,7 +101,7 @@ img {
   transition: var(--transition);
 }
 .btn-primary {
-  background: #692d17;
+  background: var(--color-danger);
   color: var(--color-white);
 }
 
@@ -168,12 +169,12 @@ header {
 /* =================== CATEGORIES =================== */
 .categories {
   background: var(--color-bg1);
-  height: 32rem;
+  height: 40rem;
 }
 
 .categories__container {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
 }
 .categories h1 {
   line-height: 1;
@@ -191,13 +192,14 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
+
 }
 .category {
   background: var(--color-bg2);
   padding: 2rem;
   border-radius: 2rem;
-  transition: var(--transition);
-  font-size: 2rem;
+  /* transition: var(--transition); */
+  font-size: 1rem;
 }
 .category:hover {
   box-shadow: 0 3rem 3rem rbga(0, 0, 0, 0.3);
@@ -232,7 +234,7 @@ header {
 }
 /* =================== FAQs =================== */
 .faqs {
-  margin-top: 10rem;
+  /* margin-top: 15rem; */
   background: var(--color-bg1);
   box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
 }

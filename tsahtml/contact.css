@@ -1,5 +1,5 @@
 .contact_container{
-    background: var(--color-bg1);
+    background: rgb(222, 15, 15);
     padding: 4rem;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -10,9 +10,9 @@
 }
 /* ===============ASIDE============== */
 .contact_aside{
-    background: var(--color-primary);
+    background: var(--color-bg1);
     padding: 3rem;
-    border-radius: 20rem black;
+    border-radius: 2rem;
     position: relative;
     bottom: 10rem;
 
@@ -25,10 +25,15 @@
     text-align: left;
     margin-bottom: 1rem;
 }
+
 .contact_aside p{
     font-size: 0.9rem;
     margin-bottom: 2rem;
 }
+.contact_details h5 a{
+    color: var(--color-location);
+}
+
 .contact_details li{
     display: flex;
     gap: 1rem;
