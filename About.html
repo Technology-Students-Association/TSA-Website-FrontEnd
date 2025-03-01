@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TSA Website</title>
-    <link rel="stylesheet" href="CSS/styles.css" />
-    <link rel="stylesheet" href="CSS/About.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./About.css" />
     <!-- ================ICON SCOUNT ============== -->
     <link
       rel="stylesheet"
@@ -24,11 +24,16 @@
   <body>
     <nav>
       <div class="container nav__container">
-        <a href="index.html"><h4>TSA</h4></a>
+        <div class="tech">
+          <a href="index.html"><img src="Assets/images/TSA logo.jpg">
+            <h4 class="Logo1">TSA</h4></a>
+        </div>
         <ul class="nav__menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="About.html">About Us</a></li>
-          <li><a href="tsa-gallery/tsa-gallery/index.html">Gallery</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="eventdetails.html">Events</a></li>
+          <li><a href="#">Committees</a></li>
           <li><a href="contact_us.html">Contact Us</a></li>
         </ul>
         <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
@@ -42,35 +47,32 @@
           <img src="Assets/images/Dinner.jpg" alt="" />
         </div>
         <div class="about__archivements-right">
-          <h1>Achivements</h1>
+          <h1>Get To Know Us</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-            dolore reiciendis quae praesentium officia, ipsa consequatur
-            blanditiis iusto! Officia quidem sed quaerat aliquid quo libero
-            voluptatibus laborum reprehenderit ea ut.
+            Discover Who We Are, What We Do, and Why It Matters
           </p>
-          <div class="achivements__cards">
+          <div class="achivements__cards" >
             <article class="achivement__card">
               <span class="achievement__icon">
                 <i class="uil uil-video"></i>
               </span>
-              <h3>50+</h3>
-              <p>Courses</p>
+              <h3><a class="color" href="eventdetails.html">Events</a></h3>
+              <p>Our Events</p>
             </article>
             <article class="achivement__card">
               <span class="achievement__icon">
                 <i class="uil uil-users-alt"></i>
               </span>
-              <h3>100,000+</h3>
-              <p>Students</p>
+              <h3>Committees</h3>
+              <p>Our Committees</p>
             </article>
 
             <article class="achivement__card">
               <span class="achievement__icon">
                 <i class="uil uil-trophy"></i>
               </span>
-              <h3>50+</h3>
-              <p>Awards</p>
+              <h3>Techies</h3>
+              <p>Techies</p>
             </article>
           </div>
         </div>
@@ -95,7 +97,7 @@
               <span>Missions</span>
               <h2>
                 <a href="Gallery.html"
-                  >Lorem ipsum dolor sit. <br />Lorem, ipsum dolor.</a
+                  >It stands for Technology <br />students Association.</a</a
                 >
               </h2>
               <div class="btn-box">
@@ -156,7 +158,7 @@
             <img src="Assets/images/team1.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
+            <h4>Celine Kichwen</h4>
             <p>Chairperson</p>
           </div>
           <div class="team__member-socials">
@@ -176,8 +178,8 @@
             <img src="Assets/images/team2.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
-            <p>Chairperson</p>
+            <h4>Joshua Kimeto</h4>
+            <p>Vice Chairperson</p>
           </div>
           <div class="team__member-socials">
             <a href="https://instagram.com" target="_blank"
@@ -196,8 +198,8 @@
             <img src="Assets/images/team3.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
-            <p>Chairperson</p>
+            <h4>Benjamin Wanjala</h4>
+            <p>Assistant Sec. Gen</p>
           </div>
           <div class="team__member-socials">
             <a href="https://instagram.com" target="_blank"
@@ -216,8 +218,8 @@
             <img src="Assets/images/team4.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
-            <p>Chairperson</p>
+            <h4>Chris Donge</h4>
+            <p>Projects Coordinator</p>
           </div>
           <div class="team__member-socials">
             <a href="https://instagram.com" target="_blank"
@@ -236,8 +238,8 @@
             <img src="Assets/images/team5.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
-            <p>Chairperson</p>
+            <h4>Chemjor Kelvin</h4>
+            <p>Finance Secretary</p>
           </div>
           <div class="team__member-socials">
             <a href="https://instagram.com" target="_blank"
@@ -256,8 +258,8 @@
             <img src="Assets/images/team6.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
-            <p>Chairperson</p>
+            <h4>Caren Bor</h4>
+            <p>Publicity Secretary</p>
           </div>
           <div class="team__member-socials">
             <a href="https://instagram.com" target="_blank"
@@ -276,8 +278,8 @@
             <img src="Assets/images/team7.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
-            <p>Chairperson</p>
+            <h4>Ruth Mokeira</h4>
+            <p>Secretary General</p>
           </div>
           <div class="team__member-socials">
             <a href="https://instagram.com" target="_blank"
@@ -296,8 +298,8 @@
             <img src="Assets/images/team8.jpg" alt="" />
           </div>
           <div class="team__member-info">
-            <h4>Celine Kitchwen</h4>
-            <p>Chairperson</p>
+            <h4>Reagan Odera</h4>
+            <p>Assist. Project Coordinator</p>
           </div>
           <div class="team__member-socials">
             <a href="https://instagram.com" target="_blank"
@@ -319,9 +321,8 @@
         <div class="footer__1">
           <a href="index.html" class="footer__logo"><h4>TSA</h4></a>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-            blanditiis velit minus tempore dignissimos id, sapiente alias
-            corporis magni accusamus!
+            The association is a representation of Moi Universtity school of Engineering. It is a non-profit
+            ,student run, independent & educational organization.
           </p>
         </div>
         <div class="footer__2">
@@ -347,7 +348,7 @@
           <h4>Contact Us</h4>
           <div>
             <p>+254700000000</p>
-            <p>tsa@gmail.com</p>
+            <p>technologystudentsmoi@gmail.com</p>
           </div>
           <ul class="footer__socials">
             <li>
@@ -377,7 +378,7 @@
         </div>
       </div>
       <div class="footer__copyright">
-        <small>Copyright &copy; TSA 2024</small>
+        <small>Copyright &copy; TSA 2025</small>
       </div>
     </footer>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TSA Website</title>
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <!-- ================ICON SCOUNT ============= -->
     <link
       rel="stylesheet"
@@ -19,21 +19,29 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    
+    </style>
   </head>
   <body>
     <nav>
       <div class="container nav__container">
-        <a href="index.html"><h4>TSA</h4></a>
+        <div class="tech">
+          <a href="index.html"><img src="Assets/images/TSA logo.jpg">
+            <h4 class="Logo1">TSA</h4></a>
+        </div>
         <ul class="nav__menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="About.html">About Us</a></li>
-          <li><a href="tsa-gallery/tsa-gallery/index.html">Gallery</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="eventdetails.html">Events</a></li>
+          <li><a href="#">Committees</a></li>
           <li><a href="contact_us.html">Contact Us</a></li>
         </ul>
         <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
         <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
       </div>
     </nav>
+    
      <header>
       <div class="container header__container">
         <div class="header__left">
@@ -42,7 +50,7 @@
             The association is a representation of Moi Universtity school of Engineering. It is a non-profit
             ,student run, independent & educational organization.
           </p>
-          <a href="ContactUs.html" class="btn btn-primary">Get Started</a>
+          <a href="contact_us.html" class="btn btn-primary">Get Started</a>
         </div>
         <div class="slideshow-container">
           <div class="slide fade">
@@ -87,28 +95,30 @@
         <div class="categories__left">
           <h1>Categories</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-            ut? Nulla explicabo quod dolores nihil rerum quia nisi neque autem!
-            Exercitationem qui omnis delectus, pariatur ad illum autem eveniet
-            ipsam.
+            The TSA (Technical Students Association) is a dynamic, 
+            student-run organization that brings together engineering
+             students from diverse disciplines. United by a passion for 
+             innovation and collaboration, TSA members represent a wide range 
+             of engineering fields, fostering interdisciplinary learning and 
+             teamwork to tackle real-world challenges.
           </p>
-          <a href="#" class="btn">Learn More</a>
+          <a href="#" class="btn btn-primary">Learn More</a>
         </div>
         <div class="categories__right">
           <article class="category">
             <span class="category__icon"><i class="uil uil-bolt"></i></span>
             <h5>Electrical Engineering</h5>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              praesentium!
+              This department focuses on electronics,
+               circuits, signal processing, telecommunications, and embedded systems.
             </p>
           </article>
           <article class="category">
             <span class="category__icon"><i class="uil uil-wrench"></i></span>
             <h5>Mechanical Engineering</h5>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              praesentium!
+              This department deals with manufacturing processes,
+               machine design, production planning, and quality control.
             </p>
           </article>
           <article class="category">
@@ -117,32 +127,33 @@
             ></span>
             <h5>Chemical Engineering</h5>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              praesentium!
+              This department deals with manufacturing
+               processes, machine design, production planning, and quality control.
             </p>
           </article>
           <article class="category">
             <span class="category__icon"><i class="uil uil-plane"></i></span>
-            <h5>Aerospace Engineering</h5>
+            <h5>Telecommunication Engineering</h5>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              praesentium!
+              This field specializes in telecommunication systems,
+               including network design, data transmission, 
+               satellite communication, and wireless technologies.
             </p>
           </article>
           <article class="category">
             <span class="category__icon"><i class="uil uil-arrow"></i></span>
-            <h5>Software Engineering</h5>
+            <h5>Manufacturing Industrial and Textile Engineering</h5>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              praesentium!
+              This department combines manufacturing processes, 
+              industrial systems, and textile technology.
             </p>
           </article>
           <article class="category">
             <span class="category__icon"><i class="uil uil-spade"></i></span>
-            <h5>Cival Engineering</h5>
+            <h5>Civil Engineering</h5>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              praesentium!
+              This field focuses on the design, construction,
+               and maintenance of infrastructure such as buildings, bridges, dams, and roads.
             </p>
           </article>
         </div>
@@ -167,7 +178,7 @@
         <article class="faq">
           <div class="faq__icon"><i class="uil uil-plus"></i></div>
           <div class="question_answer">
-            <h4>What is TSA?</h4>
+            <h4>Who is the current TSA Chairperson?</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
@@ -179,7 +190,7 @@
         <article class="faq">
           <div class="faq__icon"><i class="uil uil-plus"></i></div>
           <div class="question_answer">
-            <h4>What is TSA?</h4>
+            <h4>When is the next TSA election?</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
@@ -191,7 +202,7 @@
         <article class="faq">
           <div class="faq__icon"><i class="uil uil-plus"></i></div>
           <div class="question_answer">
-            <h4>What is TSA?</h4>
+            <h4>Is TSA accomodative none Engineering Students?</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
@@ -203,7 +214,7 @@
         <article class="faq">
           <div class="faq__icon"><i class="uil uil-plus"></i></div>
           <div class="question_answer">
-            <h4>What is TSA?</h4>
+            <h4>How do i become a TSA member?</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
@@ -215,7 +226,7 @@
         <article class="faq">
           <div class="faq__icon"><i class="uil uil-plus"></i></div>
           <div class="question_answer">
-            <h4>What is TSA?</h4>
+            <h4> How does TSA promote innovation among its members?</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
@@ -224,126 +235,7 @@
             </p>
           </div>
         </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
-        <article class="faq">
-          <div class="faq__icon"><i class="uil uil-plus"></i></div>
-          <div class="question_answer">
-            <h4>What is TSA?</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem, accusamus quis quas sequi, dolor quasi obcaecati
-              cum corrupti quam, voluptas fugiat a incidunt numquam? Deleniti
-              culpa sit eligendi voluptatem laborum.
-            </p>
-          </div>
-        </article>
+      
       </div>
     </section>
 
@@ -359,15 +251,15 @@
             />
           </div>
           <div class="testimonial__info">
-            <h5>Mc Donge</h5>
-            <small>TSA Project Codinator</small>
+            <h5>Emmanuel, Telecommunication</h5>
+            <small>Member</small>
           </div>
           <div class="testimonial__body">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro id
-              est illo sit suscipit quo molestias et asperiores, nostrum veniam
-              reiciendis repellat unde delectus quas dolor officiis debitis
-              neque nemo.
+              Joining TSA has been a game-changer for me. 
+              The workshops and collaborative projects have helped me apply 
+              classroom knowledge to real-world problems.
+               It’s a great platform to network and grow!
             </p>
           </div>
         </article>
@@ -379,15 +271,14 @@
             />
           </div>
           <div class="testimonial__info">
-            <h5>Mc Donge</h5>
-            <small>TSA Project Codinator</small>
+            <h5>Ogola, Electrical</h5>
+            <small>Member</small>
           </div>
           <div class="testimonial__body">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro id
-              est illo sit suscipit quo molestias et asperiores, nostrum veniam
-              reiciendis repellat unde delectus quas dolor officiis debitis
-              neque nemo.
+              TSA has given me the opportunity to work with students from other departments. 
+              The interdisciplinary approach has broadened my perspective 
+              and improved my problem-solving skills.
             </p>
           </div>
         </article>
@@ -399,15 +290,13 @@
             />
           </div>
           <div class="testimonial__info">
-            <h5>Mc Donge</h5>
-            <small>TSA Project Codinator</small>
+            <h5> Kerren, Telecommunication</h5>
+            <small>Member</small>
           </div>
           <div class="testimonial__body">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro id
-              est illo sit suscipit quo molestias et asperiores, nostrum veniam
-              reiciendis repellat unde delectus quas dolor officiis debitis
-              neque nemo.
+              The technical events and competitions organized by TSA have pushed me to think creatively and innovate.
+               It’s inspiring to be part of such a motivated community of engineers.
             </p>
           </div>
         </article>
@@ -419,15 +308,13 @@
             />
           </div>
           <div class="testimonial__info">
-            <h5>Mc Donge</h5>
-            <small>TSA Project Codinator</small>
+            <h5>Lewis</h5>
+            <small>Member</small>
           </div>
           <div class="testimonial__body">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro id
-              est illo sit suscipit quo molestias et asperiores, nostrum veniam
-              reiciendis repellat unde delectus quas dolor officiis debitis
-              neque nemo.
+              "TSA has been instrumental in helping me develop leadership and teamwork skills.
+               The hands-on projects and mentorship programs have prepared me for my future career."
             </p>
           </div>
         </article>
@@ -438,6 +325,7 @@
               alt=""
             />
           </div>
+      
           <div class="testimonial__info">
             <h5>Mc Donge</h5>
             <small>TSA Project Codinator</small>
@@ -480,9 +368,8 @@
         <div class="footer__1">
           <a href="index.html" class="footer__logo"><h4>TSA</h4></a>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-            blanditiis velit minus tempore dignissimos id, sapiente alias
-            corporis magni accusamus!
+            The association is a representation of Moi Universtity school of Engineering. It is a non-profit
+            ,student run, independent & educational organization.
           </p>
         </div>
         <div class="footer__2">
@@ -490,8 +377,8 @@
           <ul class="permalinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
-            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
           </ul>
         </div>
 
@@ -508,7 +395,7 @@
           <h4>Contact Us</h4>
           <div>
             <p>+254700000000</p>
-            <p>tsa@gmail.com</p>
+            <p>technologystudentsmoi@gmail.com</p>
           </div>
           <ul class="footer__socials">
             <li>
@@ -538,7 +425,7 @@
         </div>
       </div>
       <div class="footer__copyright">
-        <small>Copyright &copy; TSA 2024</small>
+        <small>Copyright &copy; TSA 2025</small>
       </div>
     </footer>
 

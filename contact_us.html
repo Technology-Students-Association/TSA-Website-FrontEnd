@@ -1,211 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contact.css">
-    <!-- animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.jpeg" type="image/x-icon">
-    <!-- googlefonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:ital@0;1&display=swap" rel="stylesheet">
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/b9069eae33.js" crossorigin="anonymous"></script>
-    <title>TSA</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSA Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <!-- ================ICON SCOUNT ============== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
 
-<body id="main-page" class="main-contents">
-    <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>TSA Website</title>
-          <link rel="stylesheet" href="CSS/styles.css" />
-          <link rel="stylesheet" href="CSS/About.css" />
-          <!-- ================ICON SCOUNT ============== -->
-          <link
-            rel="stylesheet"
-            href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-          />
-      
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-          />
-        </head>
-        <body>
-          <nav>
-            <div class="container nav__container">
-              <a href="index.html"><h4>TSA</h4></a>
-              <ul class="nav__menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About Us</a></li>
-                <li><a href="tsa-gallery/tsa-gallery/index.html">Gallery</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-              </ul>
-              <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
-              <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
-            </div>
-          </nav>
-          <!-- =======================================END OF NAV BAR ========================= -->
-          <section class="contact section" id="contact">
-            <div class="container">
-              <div class="row">
-                <div class="section-title padd-15">
-                  <h2>Contact Me</h2>
-                </div>
-              </div>
-              <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
-              <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
-              <div class="row">
-                <!--=========Contact info item start=========-->
-                <div class="container-info-item padd-15">
-                  <div class="icon"><i class="fa fa-phone"></i></div>
-                  <h4>Call Us Me</h4>
-                  <p>+254 784594734</p>
-                </div>
-                <!--=========Contact info item End=========-->
-                <!--=========Contact info item start=========-->
-                <div class="container-info-item padd-15">
-                  <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                  <h4>Office</h4>
-                  <p>Nairobi</p>
-                </div>
-                <!--=========Contact info item End=========-->
-                <!--=========Contact info item start=========-->
-                <div class="container-info-item padd-15">
-                  <div class="icon"><i class="fa fa-envelope"></i></div>
-                  <h4>Email</h4>
-                  <p>lewismachabe@gmail.com</p>
-                </div>
-                <!--=========Contact info item End=========-->
-                <!--=========Contact info item start=========-->
-                <div class="container-info-item padd-15">
-                  <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                  <h4>Website</h4>
-                  <p><a href=" https://12492sachet.github.io/UrbanStyleHub/">UrbanStyleHub</a></p>
-                </div>
-                <!--=========Contact info item End=========-->
-    
-              </div>
-              <h3 class="contact-title">SEND ME US EMAIL</h3>
-              <h4 class="contact-sub-title ">WE ARE VERY RESPOSIVE TO MESSAGES</h4>
-              <!-- ======Contact Form=======-->
-              <div class="row">
-                <div class="contact-form ">
-                  <div class="row">
-                    <div class="form-item col-6">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="Name" placeholder="name">
-                      </div>
-                    </div>
-                    <div class="form-item ">
-                      <div class="form-group">
-                        <input type="email" class="form-control" 
-                        id="Email" placeholder="Email">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-item col-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="Subject" placeholder="Subject">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-item col-12 padd-15">
-                      <div class="form-group">
-                        <textarea name="" class="form-control" id="Message" placeholder="Message" ></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-item col-12 padd-15">
-                      <button type="submit" class="btn" onClick="sendMail()">Send Message</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="row">
-            </div>
-           </section>
-      
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav__container">
+        <div class="tech">
+          <a href="index.html"><img src="Assets/images/TSA logo.jpg">
+            <h4 class="Logo1">TSA</h4></a>
+        </div>
+        <ul class="nav__menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Committees</a></li>
+          <li><a href="tsa-gallery/tsa-gallery/index.html">Gallery</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+      </div>
+    </nav>
+    <!-- =======================================END OF NAV BAR ========================= -->
+    <section class="contact">
+      <div class="container contact_container">
+        <aside class="contact_aside">
+          <div class="aside_image">
+            <img src="tsahtml/picha/quino-al-8gWEAAXJjtI-unsplash.jpg" alt="contact" />
+          </div>
+          <h2>Contact Us</h2>
+          <p>
+            Have questions or need assistance? 
+            We're here to help! Reach out to us, and we'll get back to you as soon as possible.
+          </p>
+          <ul class="contact_details">
+            <li>
+              <i class="uil uil-phone-times"></i>
+            <h5>25472000000</h5>
+            </li>
+            <li>
+              <i class="uil uil-envelope"></i>
+            <h5>technologystudentsmoi@gmail.com</h5>
+            </li>
+            <li>
+              <i class="uil uil-location-point"></i>
+            <h5><a href="https://maps.app.goo.gl/3MsoW8Zcn5UVXTM59">Moi University Main Campus</a></h5>
+            </li>
+          </ul>
+          <ul class="contact_socials">
+            <li><a href="https://facebook.com"><i class="uil-facebook-f"></i></a></li>
+            <li><a href="https://instagram.com"><i class="uil-instagram-alt"></i></a></li>
+            <li><a href="https://uil-linkedin-alt.com"><i class="uil-linkedin-alt"></i></a></li>
+            <li><a href="https://x.com"><i class="uil uil-twitter"></i></a></li>
+          </ul>
+        </aside>
+
+        <form  action="https://formspree.io/f/xpwqbknv" method="POST" class="contact_form">
+          <div class="form_name">
+            <input type="text" name="First Name" id="First Name" placeholder="First Name" required/>
+            <input type="text" name="Second Name" id="Second Name" placeholder="Second Name" required/>
+          </div>
+          <input type="email" name="Email" id="Email" placeholder="Your Email Address" required/>
+          <textarea name="Message" rows="?" id="" placeholder="Message" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+
+      </div>
+    </section>
+   
+
     <footer>
-        <div class="container footer__container">
-          <div class="footer__1">
-            <a href="index.html" class="footer__logo"><h4>TSA</h4></a>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-              blanditiis velit minus tempore dignissimos id, sapiente alias
-              corporis magni accusamus!
-            </p>
-          </div>
-          <div class="footer__2">
-            <h4>Permalinks</h4>
-            <ul class="permalinks">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="About.html">About</a></li>
-              <li><a href="ContactUs.html">Contact Us</a></li>
-              <li><a href="Gallery.html">Gallery</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer__3">
-            <h4>Primacy</h4>
-            <ul class="Primacy">
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms and Condition</a></li>
-              <li><a href="#">Refund Policy</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer__4">
-            <h4>Contact Us</h4>
-            <div>
-              <p>+254700000000</p>
-              <p>tsa@gmail.com</p>
-            </div>
-            <ul class="footer__socials">
-              <li>
-                <a href="https://www.facebook.com/moiunitsa/"
-                  ><i class="uil uil-facebook-f"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh"
-                  ><i class="uil uil-instagram-alt"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09"
-                  ><i class="uil uil-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/technology-students-association-835161232"
-                  ><i class="uil uil-linkedin-alt"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
+      <div class="container footer__container">
+        <div class="footer__1">
+          <a href="index.html" class="footer__logo"><h4>TSA</h4></a>
+          <p>
+            The association is a representation of Moi Universtity school of Engineering. It is a non-profit
+            ,student run, independent & educational organization.
+          </p>
         </div>
-        <div class="footer__copyright">
-          <small>Copyright &copy; TSA 2024</small>
-        </div>
-      </footer>
+        <div class="footer__2">
+          <h4>Permalinks</h4>
+          <ul class="permalinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="eventdetails.html">Events</a></li>
+            <li><a href="#">Committees</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
 
-    <!-- JavaScript -->
-    <script src="contact.js"></script>
-</body>
+          </ul>
+        </div>
+
+        <div class="footer__3">
+          <h4>Primacy</h4>
+          <ul class="Primacy">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Condition</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__4">
+          <h4>Contact Us</h4>
+          <div>
+            <p>+254700000000</p>
+            <p>technologystudentsmoi@gmail.com</p>
+          </div>
+          <ul class="footer__socials">
+            <li>
+              <a href="https://www.facebook.com/moiunitsa/"
+                ><i class="uil uil-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh"
+                ><i class="uil uil-instagram-alt"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09"
+                ><i class="uil uil-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/technology-students-association-835161232"
+                ><i class="uil uil-linkedin-alt"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>Copyright &copy; TSA 2024</small>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
