@@ -417,7 +417,7 @@
   right: -100%;
   display: flex;
   flex-direction: column;
-  background: var(--color-primary);
+  background: var(--color-bg2);
   border-radius: 1rem 0 0 1rem;
   box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
   transition: var(--transion);
