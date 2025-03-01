@@ -58,9 +58,9 @@
 }
 
 .event__event {
-  background: #f1f1ef;
+  background: #fff;
   padding: 0.5px;
-  border: 1px solid #bea6a0;
+  border: 1px solid maroon;
   border-radius: 0.5rem;
   height: 33rem;
   overflow: hidden; /* Add overflow hidden for better control */

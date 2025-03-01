@@ -468,3 +468,122 @@
     margin-bottom: 1.5rem;
   }
 }
+/* Tablet view (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Adjust vision section */
+  .about__Vision {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about__vision__about {
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+  }
+
+  .about__vision__about h4, .about__vision__about h3 {
+      font-size: 1.5rem;
+  }
+
+  /* Adjust mission section */
+  .about__Mission {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .mission__img {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .about__mission__about h4, .about__mission__about h3 {
+      font-size: 1.5rem;
+  }
+
+  /* Adjust values section */
+  .about__Values {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about__values__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+  }
+
+  .about__cards {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+  }
+
+  .toggle-header h4 {
+      font-size: 1.2rem;
+  }
+
+  .toggle-content p {
+      font-size: 1rem;
+  }
+}
+
+/* Phone view (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Adjust vision section */
+  .about__Vision {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .about__vision__about {
+    
+      background-position: center;
+      padding: 15px;
+  }
+
+  .about__vision__about h4, .about__vision__about h3 {
+      font-size: 1.2rem;
+  }
+
+  /* Adjust mission section */
+  .about__Mission {
+      flex-direction: column;
+      padding: 10px;
+      grid-template-columns: 1fr;
+  }
+
+  .mission__img {
+      width: 100%;
+      height: auto;
+  }
+
+
+  /* Adjust values section */
+  .about__Values {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .about__values__cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about__cards {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  .toggle-header h4 {
+      font-size: 1rem;
+  }
+
+  .toggle-content p {
+      font-size: 0.9rem;
+  }
+}
+

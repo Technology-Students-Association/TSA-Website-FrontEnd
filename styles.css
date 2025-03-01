@@ -303,7 +303,7 @@ header {
   text-align: center;
 }
 .testimonial__body {
-  background: maroon;
+  background: var(--color-bg2);
   padding: 2rem;
   margin-top: 3rem;
   position: relative;
@@ -312,7 +312,7 @@ header {
 .testimonial__body::before {
   content: "";
   display: block;
-  background: linear-gradient(-1deg, transparent, maroon, maroon);
+  background: linear-gradient(-1deg, transparent, var(--color-bg2), var(--color-bg2));
   width: 3rem;
   height: 3rem;
   position: absolute;
@@ -482,7 +482,7 @@ footer ul li a:hover {
   }
   /* ================ Header =========== */
   header {
-    height: 150vh;
+    height: 86vh;
   }
   .slideshow-container {
     margin-top: 5rem;
