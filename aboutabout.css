@@ -205,4 +205,54 @@
     max-height: 200px; /* Adjust based on content height */
     padding: 20px;
 }
- 
+/* ============== media queries Tablets ============== */
+@media screen and (max-width: 1024px) {
+    .about__container{
+      grid-template-columns: 1fr;
+    }
+    .about__archivements {
+      margin-top: 2rem;
+    }
+    .about__achivements-container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    .about__archivements-left {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .team__container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .team__member {
+      padding: 1rem;
+    }
+  }
+  /* ============== media queries phones ============== */
+  
+  @media screen and (max-width: 600px) {
+    .about__container .about__vision__about{
+      grid-template-columns: 1fr;
+     }
+    .achivement__cards {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+    }
+    .team__container {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+    }
+    .team__member {
+      padding: 0;
+    }
+    git .team__member p {
+      margin-bottom: 1.5rem;
+    }
+    .about__Mission{
+      grid-template-columns: 1fr;
+      gap:0.7;
+    }
+    
+  }
+  
