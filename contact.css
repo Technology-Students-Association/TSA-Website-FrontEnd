@@ -79,7 +79,7 @@ input,
 textarea{
     width: 100%;
     padding: 1rem;
-    background:var(--color-bg) ;
+    background: white ;
     color: rgba(18, 17, 17, 0.477);
     border-radius: 1rem;
 }

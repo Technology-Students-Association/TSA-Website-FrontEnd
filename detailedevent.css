@@ -82,6 +82,7 @@
     justify-content: center;
     margin-left: 10px;
     flex-direction: column;
+    margin-right: 20rem;
 }
 .Container__poster_right{
     width: 400px;
@@ -92,7 +93,7 @@
     justify-content: center;
     margin-right: 20px;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 100rem;
 }
 .poster__timedate{
     justify-content: center;
@@ -169,6 +170,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: start;
+}
+.poster__description p{
+  text-align: start;
 }
 @media (max-width: 1024px) {
     .event__det {
