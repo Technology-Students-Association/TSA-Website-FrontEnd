@@ -124,6 +124,8 @@ nav {
   position: fixed;
   top: 0;
   z-index: 11;
+  border-bottom: 2000px;
+  border-color: maroon;
 }
 #open-menu-btn {
   color: #692d17;
