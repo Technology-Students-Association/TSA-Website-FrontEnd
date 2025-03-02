@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --color-primary: #c60d0a;
   --color-bg2: #fdf9ff;
@@ -32,6 +33,9 @@ body {
   background-color: var(--color-bg1);
   line-height: 1.7;
   color: var(--color-black);
+}
+.meta-logo{
+  border-radius: 50%;
 }
 .container {
   width: var(--container-width-lg);
@@ -128,7 +132,7 @@ nav {
   border-color: maroon;
 }
 #open-menu-btn {
-  color: #692d17;
+  color: #692d17;  
 }
 
 #close-menu-btn {
