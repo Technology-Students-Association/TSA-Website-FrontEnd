@@ -429,9 +429,9 @@
 .team__member-socials a {
   padding: 1rem;
 }
-/* ============== media queries ============== */
+/*============== media queries ==============*/
 @media screen and (max-width: 1024px) {
-  .about__archivements {
+  /* .about__archivements {
     margin-top: 2rem;
   }
   .about__achivements-container {
@@ -441,7 +441,7 @@
   .about__archivements-left {
     width: 80%;
     margin: 0 auto;
-  }
+  } */
   .team__container {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -453,10 +453,10 @@
 /* ============== media queries phones ============== */
 
 @media screen and (max-width: 480px) {
-  .achivement__cards {
+  /* .achivement__cards {
     grid-template-columns: 1fr 1fr;
     gap: 0.7rem;
-  }
+  } */
   .team__container {
     grid-template-columns: 1fr 1fr;
     gap: 0.7rem;
@@ -469,9 +469,9 @@
   }
 }
 /* Tablet view (max-width: 1024px) */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) { */
   /* Adjust vision section */
-  .about__Vision {
+  /* .about__Vision {
       flex-direction: column;
       text-align: center;
   }
@@ -484,10 +484,10 @@
 
   .about__vision__about h4, .about__vision__about h3 {
       font-size: 1.5rem;
-  }
+  } */
 
   /* Adjust mission section */
-  .about__Mission {
+  /* .about__Mission {
       flex-direction: column;
       text-align: center;
   }
@@ -499,10 +499,10 @@
 
   .about__mission__about h4, .about__mission__about h3 {
       font-size: 1.5rem;
-  }
+  } */
 
   /* Adjust values section */
-  .about__Values {
+  /* .about__Values {
       flex-direction: column;
       text-align: center;
   }
@@ -526,13 +526,13 @@
 
   .toggle-content p {
       font-size: 1rem;
-  }
-}
+  } */
+
 
 /* Phone view (max-width: 600px) */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) { */
   /* Adjust vision section */
-  .about__Vision {
+  /* .about__Vision {
       flex-direction: column;
       padding: 10px;
   }
@@ -545,10 +545,10 @@
 
   .about__vision__about h4, .about__vision__about h3 {
       font-size: 1.2rem;
-  }
+  } */
 
   /* Adjust mission section */
-  .about__Mission {
+  /* .about__Mission {
       flex-direction: column;
       padding: 10px;
       grid-template-columns: 1fr;
@@ -557,11 +557,11 @@
   .mission__img {
       width: 100%;
       height: auto;
-  }
+  } */
 
 
   /* Adjust values section */
-  .about__Values {
+  /* .about__Values {
       flex-direction: column;
       padding: 10px;
   }
@@ -585,5 +585,5 @@
   .toggle-content p {
       font-size: 0.9rem;
   }
-}
+} */
 

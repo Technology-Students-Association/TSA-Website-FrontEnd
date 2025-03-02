@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --color-primary: #c60d0a;
   --color-bg2: #fdf9ff;
@@ -32,6 +33,9 @@ body {
   background-color: var(--color-bg1);
   line-height: 1.7;
   color: var(--color-black);
+}
+.meta-logo{
+  border-radius: 50%;
 }
 .container {
   width: var(--container-width-lg);
@@ -124,9 +128,11 @@ nav {
   position: fixed;
   top: 0;
   z-index: 11;
+  border-bottom: 2000px;
+  border-color: maroon;
 }
 #open-menu-btn {
-  color: #692d17;
+  color: #692d17;  
 }
 
 #close-menu-btn {
@@ -231,6 +237,9 @@ header {
 .category:nth-child(6) .category__icon {
   background: var(--color-success);
 }
+.category:nth-child(7) .category__icon {
+  background: var(--color-red);
+}
 
 .category__icon {
   background: var(--color-primary);
@@ -297,7 +306,7 @@ header {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 1rem;
-  border: 1rem solid var(--color-bg2);
+  border: 1rem solid var(--color-transparent);
 }
 .testimonial__info {
   text-align: center;
