@@ -1,940 +1,1372 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Clubs - TSA Website</title>
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        text-decoration: none;
-        list-style: none;
-        box-sizing: border-box;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Clubs - TSA Website</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Iconscout Icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <style>
+    /* =================== VARIABLES =================== */
+    :root {
+      /* Original Colors */
+      --color-primary: #c60d0a;
+      --color-bg2: #fdf9ff;
+      --color-bg1: #f8ece6;
+      --color-white: #ffffff;
+      --color-black: #000;
+      --color-light: rgba(255, 255, 255, 0.7);
+      --color-success: #00bf8e;
+      --color-danger: #f75842;
+      --color-warning: #f7c94b;
+      --color-location: #000;
+      --color-secondary: #692d17;
+      
+      /* Container widths */
+      --container-width-lg: 85%;
+      --container-width-md: 90%;
+      --container-width-sm: 94%;
+      
+      /* Transitions */
+      --transition: all 400ms ease;
+      --transition-fast: all 300ms ease;
+      --transition-medium: all 500ms ease;
+      --transition-slow: all 800ms ease;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+      
+      /* Border radius */
+      --radius-sm: 0.5rem;
+      --radius-md: 1rem;
+      --radius-lg: 2rem;
+      --radius-full: 50%;
+    }
+
+    /* =================== RESET =================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.7;
+      color: var(--color-black);
+      background-color: var(--color-bg1);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.2;
+      color: var(--color-secondary);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+    }
+
+    a {
+      color: var(--color-secondary);
+      transition: var(--transition-fast);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      width: var(--container-width-lg);
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    /* =================== UTILITY CLASSES =================== */
+    .text-primary {
+      color: var(--color-primary);
+    }
+
+    .text-secondary {
+      color: var(--color-secondary);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-1 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 2rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 1rem;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--color-primary);
+      border-radius: 5px;
+    }
+
+    .section-subtitle {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--color-black);
+      text-align: center;
+      margin-top: -2rem;
+      margin-bottom: 4rem;
+    }
+
+    /* =================== BUTTONS =================== */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: var(--transition-fast);
+      z-index: -1;
+    }
+
+    .btn:hover::before {
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: maroon;
+      color: var(--color-white);
+      box-shadow: 0 4px 15px rgba(150, 0, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #960000;
+      box-shadow: 0 6px 20px rgba(150, 0, 0, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-secondary);
+      border: 2px solid var(--color-secondary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-secondary);
+      color: var(--color-white);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(105, 45, 23, 0.2);
+    }
+
+    .btn-icon {
+      margin-left: 0.5rem;
+      transition: var(--transition-fast);
+    }
+
+    .btn:hover .btn-icon {
+      transform: translateX(5px);
+    }
+
+    /* =================== NAVBAR =================== */
+    nav {
+      width: 100%;
+      height: 5rem;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background: transparent;
+      transition: var(--transition-medium);
+    }
+
+    .nav-scrolled {
+      background: var(--color-white);
+      box-shadow: var(--shadow-md);
+      height: 4.5rem;
+    }
+
+    .nav__container {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav__logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: var(--radius-full);
+      transition: var(--transition-fast);
+    }
+
+    .nav-scrolled .nav__logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .nav__logo h4 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      transition: var(--transition-fast);
+    }
+
+    .nav-scrolled .nav__logo h4 {
+      font-size: 1.6rem;
+    }
+
+    .nav__menu {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .nav__menu a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-secondary);
+      position: relative;
+    }
+
+    .nav__menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--color-primary);
+      border-radius: 5px;
+      transition: var(--transition-fast);
+    }
+
+    .nav__menu a:hover {
+      color: var(--color-primary);
+    }
+
+    .nav__menu a:hover::after {
+      width: 100%;
+    }
+
+    .nav__toggle-btn {
+      display: none;
+      background: transparent;
+      font-size: 1.8rem;
+      color: var(--color-secondary);
+      cursor: pointer;
+    }
+
+    /* =================== HEADER =================== */
+    header {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 900px;
+      background: var(--color-bg1);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .header__container {
+      color: var(--color-secondary);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header__title {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-secondary);
+      animation: fadeInDown 1s ease;
+    }
+
+    .header__subtitle {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1.2rem;
+      color: var(--color-black);
+      animation: fadeInUp 1s ease 0.3s forwards;
+      opacity: 0;
+    }
+
+    .header__btn-container {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      animation: fadeInUp 1s ease 0.6s forwards;
+      opacity: 0;
+    }
+
+    .header__scroll-btn {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: var(--color-secondary);
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    /* =================== CLUBS SECTION =================== */
+    .clubs__intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 5rem;
+    }
+
+    .clubs__intro h2 {
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 1rem;
+    }
+
+    .clubs__intro h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--color-primary);
+      border-radius: 5px;
+    }
+
+    .clubs__intro p {
+      color: var(--color-black);
+    }
+
+    .club-card {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-medium);
+      margin-bottom: 5rem;
+      position: relative;
+    }
+
+    .club-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .club-card__header {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .club-card__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: var(--transition-medium);
+    }
+
+    .club-card:hover .club-card__bg {
+      transform: scale(1.1);
+    }
+
+    .club-card__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+    }
+
+    .club-card__logo {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-full);
+      background: var(--color-white);
+      padding: 1rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .club-card__title {
+      color: var(--color-white);
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .club-card__content {
+      padding: 2rem;
+    }
+
+    .club-card__description {
+      margin-bottom: 2rem;
+      color: var(--color-black);
+    }
+
+    .club-card__stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-item {
+      background: var(--color-bg2);
+      padding: 1.5rem 1rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      transition: var(--transition-fast);
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    .stat-item.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-sm);
+      background: var(--color-bg1);
+    }
+
+    .stat-item__number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-item__label {
+      font-size: 0.9rem;
+      color: var(--color-black);
+    }
+
+    .club-card__chairperson {
+      background: var(--color-bg2);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      transition: var(--transition-medium);
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    .club-card__chairperson.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .club-card__chairperson:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .chairperson__img-container {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      border: 4px solid var(--color-bg1);
+      transition: var(--transition-fast);
+    }
+
+    .club-card__chairperson:hover .chairperson__img-container {
+      transform: scale(1.1);
+      border-color: var(--color-primary);
+    }
+
+    .chairperson__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chairperson__info {
+      flex: 1;
+    }
+
+    .chairperson__name {
+      font-weight: 600;
+      color: var(--color-secondary);
+      margin-bottom: 0.3rem;
+    }
+
+    .chairperson__title {
+      font-size: 0.9rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+
+    .chairperson__quote {
+      font-style: italic;
+      color: var(--color-black);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .chairperson__quote::before {
+      content: '"';
+      font-size: 3rem;
+      position: absolute;
+      left: 0;
+      top: -1.5rem;
+      color: rgba(198, 13, 10, 0.2);
+      font-family: serif;
+    }
+
+    .club-card__actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* =================== FOOTER =================== */
+    footer {
+      background: var(--color-bg2);
+      color: var(--color-black);
+      padding-top: 5rem;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .footer__container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4rem;
+    }
+
+    .footer__heading {
+      color: var(--color-secondary);
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .footer__heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--color-primary);
+      border-radius: 5px;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer__logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-full);
+    }
+
+    .footer__logo h4 {
+      font-size: 1.8rem;
+      color: var(--color-secondary);
+    }
+
+    .footer__description {
+      margin-bottom: 2rem;
+      color: var(--color-black);
+    }
+
+    .footer__links li {
+      margin-bottom: 1rem;
+    }
+
+    .footer__links a {
+      color: var(--color-black);
+      transition: var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer__links a:hover {
+      color: var(--color-primary);
+      padding-left: 0.5rem;
+    }
+
+    .footer__contact p {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      color: var(--color-black);
+    }
+
+    .footer__contact i {
+      font-size: 1.2rem;
+      color: var(--color-primary);
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer__socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--color-white);
+      border-radius: var(--radius-full);
+      color: var(--color-secondary);
+      transition: var(--transition-fast);
+    }
+
+    .footer__socials a:hover {
+      background: var(--color-primary);
+      color: var(--color-white);
+      transform: translateY(-5px);
+    }
+
+    .footer__copyright {
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: 4rem;
+      color: var(--color-black);
+    }
+
+    /* =================== ANIMATIONS =================== */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
       }
-
-      :root {
-        --color-primary: #c60d0a;
-        --color-bg2: #fdf9ff;
-        --color-bg1: #f8ece6;
-        --color-white: #ffffff;
-        --color-black: #000;
-        --color-light: rgba(255, 255, 255, 0.7);
-        --color-success: #00bf8e;
-        --color-danger: #f75842;
-        --color-warning: #f7c94b;
-        --color-location: #000;
-        --color-secondary: #692d17;
-
-        --container-width-lg: 85%;
-        --container-width-md: 90%;
-        --container-width-sm: 94%;
-
-        --transition: all 400ms ease;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
+    }
 
-      body {
-        font-family: "Montserrat", sans-serif;
-        background-color: var(--color-bg1);
-        line-height: 1.7;
-        color: var(--color-black);
-        overflow-x: hidden;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+
+    /* =================== MEDIA QUERIES =================== */
+    @media screen and (max-width: 1024px) {
       .container {
-        width: var(--container-width-lg);
-        margin: 0 auto;
-      }
-
-      section {
-        margin-bottom: 4rem;
-      }
-
-      section h2 {
-        text-align: center;
-        margin-bottom: 4rem;
-      }
-
-      h1, h2, h3, h4, h5 {
-        line-height: 1.2;
+        width: var(--container-width-md);
       }
 
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
       }
 
       h2 {
         font-size: 2rem;
       }
 
-      h3 {
-        font-size: 1.6rem;
+      .header__title {
+        font-size: 3rem;
       }
 
-      h4 {
-        font-size: 1.3rem;
+      .club-card__stats {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      a {
-        color: #692d17;
+      .footer__container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav__menu {
+        position: fixed;
+        top: 5rem;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--color-white);
+        flex-direction: column;
+        gap: 0;
+        padding: 3rem 0;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition-medium);
       }
 
-      a img {
-        border-radius: 100%;
-        height: 40px;
-        width: 40px;
+      .nav__menu.active {
+        right: 0;
       }
 
-      img {
+      .nav__menu li {
+        width: 100%;
+        padding: 1.5rem 0;
+        text-align: center;
+      }
+
+      .nav__menu a {
         width: 100%;
         display: block;
       }
 
-      a h4 {
-        font-family: "Montserrat", sans-serif;
-        font-size: xx-large;
-      }
-
-      .tech a {
-        display: flex;
-        margin-right: 1rem;
-      }
-
-      .Logo {
-        height: 53px;
-        width: 53px;
-        border-radius: 100%;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-align: center;
-        cursor: pointer;
-      }
-
-      .btn-primary {
-        background: maroon;
-        color: var(--color-white);
-      }
-
-      .btn-primary:hover {
-        background: #960000;
-        transform: translateY(-2px);
-      }
-
-      .btn-secondary {
-        background: transparent;
-        color: var(--color-secondary);
-        border: 2px solid var(--color-secondary);
-      }
-
-      .btn-secondary:hover {
-        background: var(--color-secondary);
-        color: var(--color-white);
-        transform: translateY(-2px);
-      }
-
-      /* =================== NAVBAR =================== */
-      nav {
-        background: transparent;
-        width: 100vw;
-        height: 5rem;
-        position: fixed;
-        top: 0;
-        z-index: 11;
-        transition: var(--transition);
-      }
-
-      .window-scroll {
-        background: var(--color-bg2);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-      }
-
-      .nav__container {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      nav button {
+      .nav__menu a::after {
         display: none;
       }
 
-      .nav__menu {
-        display: flex;
-        align-items: center;
-        gap: 4rem;
+      .nav__toggle-btn {
+        display: block;
       }
 
-      .nav__menu a {
-        font-size: 0.9rem;
-        transition: var(--transition);
-      }
-
-      .nav__menu a:hover {
-        color: var(--color-primary);
-      }
-
-      /* =================== CLUBS SECTIONS =================== */
-      .page-header {
-        background: var(--color-bg2);
-        padding: 6rem 0 3rem;
+      .club-card__chairperson {
+        flex-direction: column;
         text-align: center;
-        margin-bottom: 4rem;
       }
 
-      .page-header h1 {
-        color: var(--color-secondary);
-        margin-bottom: 1rem;
+      .chairperson__quote {
+        padding-left: 0;
       }
 
-      .page-header p {
-        max-width: 800px;
-        margin: 0 auto;
+      .chairperson__quote::before {
+        left: 50%;
+        transform: translateX(-50%);
       }
 
-      .club-section {
+      .club-card__actions {
+        flex-direction: column;
+      }
+
+      .header__btn-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        width: var(--container-width-sm);
+      }
+
+      section {
         padding: 4rem 0;
-        position: relative;
-        overflow: hidden;
       }
 
-      .club-section:nth-child(even) {
-        background: var(--color-bg2);
+      h1 {
+        font-size: 2rem;
       }
 
-      .club-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: start;
-        max-width: var(--container-width-lg);
-        margin: 0 auto;
-        padding: 0 1rem;
+      h2 {
+        font-size: 1.7rem;
       }
 
-      .club-info {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+      .header__title {
+        font-size: 2.5rem;
       }
 
-      .club-info h2 {
-        color: var(--color-secondary);
-        margin-bottom: 0.5rem;
-        text-align: left;
-        font-size: 2.2rem;
-      }
-
-      .club-info p {
-        margin-bottom: 0.5rem;
+      .header__subtitle {
         font-size: 1rem;
-        line-height: 1.8;
       }
 
-      .club-logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-      }
-
-      .logo-container {
-        width: 100%;
-        max-width: 250px;
-        aspect-ratio: 1;
-        padding: 2rem;
-        background: var(--color-white);
-        border-radius: 1rem;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease;
-      }
-
-      .logo-container:hover {
-        transform: translateY(-5px);
-      }
-
-      .logo-img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-
-      .club-stats {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        width: 100%;
-        max-width: 400px;
-      }
-
-      .stat-card {
-        background: var(--color-white);
-        padding: 1.5rem 1rem;
-        border-radius: 1rem;
-        text-align: center;
-        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-        animation: fadeInUp 0.5s ease forwards;
-        opacity: 0;
-      }
-
-      .stat-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .stat-card h4 {
-        color: var(--color-primary);
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .stat-card p {
-        font-size: 0.9rem;
-        color: var(--color-black);
-      }
-
-      .chairperson-card {
-        background: var(--color-white);
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-        margin-top: 1rem;
-        transition: transform 0.3s ease;
-      }
-
-      .chairperson-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .chairperson-info {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .chairperson-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--color-bg1);
-      }
-
-      .chairperson-name {
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: var(--color-secondary);
-      }
-
-      .chairperson-title {
-        color: var(--color-primary);
-        font-size: 0.9rem;
-      }
-
-      .chairperson-quote {
-        font-style: italic;
-        line-height: 1.8;
-        color: #555;
-      }
-
-      .club-actions {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      /* =================== FOOTER =================== */
-      footer {
-        background: var(--color-bg2);
-        padding-top: 5rem;
-        font-size: 0.9rem;
+      .club-card__stats {
+        grid-template-columns: 1fr;
       }
 
       .footer__container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5rem;
+        grid-template-columns: 1fr;
+        gap: 3rem;
       }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav__container">
+      <a href="index.html" class="nav__logo">
+        <img src="/Assets/images/TSA logo.jpg" alt="TSA Logo">
+        <h4>TSA</h4>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="eventdetails.html">Events</a></li>
+        <li><a href="techclubs.html">Tech Clubs</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+      </ul>
+      <button class="nav__toggle-btn" id="open-menu-btn">
+        <i class="uil uil-bars"></i>
+      </button>
+      <button class="nav__toggle-btn" id="close-menu-btn" style="display: none;">
+        <i class="uil uil-multiply"></i>
+      </button>
+    </div>
+  </nav>
 
-      .footer__container > div h4 {
-        margin-bottom: 1.2rem;
-      }
-
-      .footer__1 p {
-        margin: 0 0 2rem;
-      }
-
-      footer ul li {
-        margin-bottom: 0.7rem;
-      }
-
-      footer ul li a:hover {
-        text-decoration: underline;
-      }
-
-      .footer__socials {
-        display: flex;
-        gap: 1rem;
-        font-size: 1.2rem;
-        margin-top: 2rem;
-      }
-
-      .footer__copyright {
-        text-align: center;
-        margin-top: 4rem;
-        padding: 1.2rem 0;
-        border-top: 1px solid rgb(2, 2, 2);
-      }
-
-      /* Animation keyframes */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .stat-card:nth-child(1) { animation-delay: 0.1s; }
-      .stat-card:nth-child(2) { animation-delay: 0.2s; }
-      .stat-card:nth-child(3) { animation-delay: 0.3s; }
-      .stat-card:nth-child(4) { animation-delay: 0.4s; }
-
-      /* =================== MEDIA QUERIES =================== */
-      @media screen and (max-width: 1200px) {
-        .container {
-          width: var(--container-width-md);
-        }
-
-        .club-container {
-          gap: 3rem;
-        }
-
-        .logo-container {
-          max-width: 200px;
-        }
-      }
-
-      @media screen and (max-width: 900px) {
-        nav button {
-          display: inline-block;
-          background: transparent;
-          font-size: 1.8rem;
-          color: var(--color-secondary);
-          cursor: pointer;
-        }
-
-        nav button#close-menu-btn {
-          display: none;
-        }
-
-        .nav__menu {
-          position: fixed;
-          top: 5rem;
-          right: 5%;
-          height: fit-content;
-          width: 18rem;
-          flex-direction: column;
-          gap: 0;
-          display: none;
-          background: var(--color-bg2);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-        }
-
-        .nav__menu.active {
-          display: flex;
-        }
-
-        .nav__menu li {
-          width: 100%;
-          height: 5.8rem;
-          animation: animateNavItem 400ms linear forwards;
-          transform-origin: top right;
-          opacity: 0;
-        }
-
-        .nav__menu li:nth-child(2) { animation-delay: 200ms; }
-        .nav__menu li:nth-child(3) { animation-delay: 400ms; }
-        .nav__menu li:nth-child(4) { animation-delay: 600ms; }
-        .nav__menu li:nth-child(5) { animation-delay: 800ms; }
-        .nav__menu li:nth-child(6) { animation-delay: 1000ms; }
-
-        @keyframes animateNavItem {
-          0% {
-            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
-          }
-          100% {
-            transform: rotateZ(0) rotateX(0) scale(1);
-            opacity: 1;
-          }
-        }
-
-        .nav__menu li a {
-          width: 100%;
-          height: 100%;
-          display: grid;
-          place-items: center;
-          background: var(--color-bg2);
-          box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
-        }
-
-        .club-container {
-          grid-template-columns: 1fr;
-          gap: 4rem;
-        }
-
-        .club-logo {
-          order: -1;
-        }
-
-        .logo-container {
-          max-width: 180px;
-        }
-
-        .club-stats {
-          max-width: 100%;
-        }
-
-        .club-info h2 {
-          text-align: center;
-        }
-
-        .club-actions {
-          justify-content: center;
-        }
-
-        .footer__container {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        .container {
-          width: var(--container-width-sm);
-          padding: 0 1rem;
-        }
-
-        .nav__menu {
-          right: 3%;
-        }
-
-        .page-header {
-          padding: 4rem 1rem 2rem;
-        }
-
-        .page-header h1 {
-          font-size: 2rem;
-        }
-
-        .club-section {
-          padding: 3rem 0;
-        }
-
-        .club-container {
-          gap: 2rem;
-        }
-
-        .club-info h2 {
-          font-size: 1.8rem;
-        }
-
-        .chairperson-info {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .club-actions {
-          flex-direction: column;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .footer__container {
-          grid-template-columns: 1fr;
-          text-align: center;
-          gap: 2rem;
-        }
-
-        .footer__1 {
-          margin: 1rem auto;
-        }
-
-        .footer__socials {
-          justify-content: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav>
-      <div class="container nav__container">
-        <div class="tech">
-          <a href="index.html">
-            <img src="/Assets/images/TSA logo.jpg" alt="TSA Logo">
-            <h4 class="Logo1">TSA</h4>
-          </a>
-        </div>
-        <ul class="nav__menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">About Us</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="eventdetails.html">Events</a></li>
-          <li><a href="techclubs.html">Tech Clubs</a></li>
-          <li><a href="contact_us.html">Contact Us</a></li>
-        </ul>
-        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
-        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+  <!-- Header -->
+  <header>
+    <div class="container header__container">
+      <h1 class="header__title">Tech Clubs</h1>
+      <p class="header__subtitle">
+        Explore our vibrant tech clubs that provide opportunities for students to develop technical skills, 
+        network with industry professionals, and work on exciting projects.
+      </p>
+      <div class="header__btn-container">
+        <a href="#clubs" class="btn btn-primary">Explore Clubs <i class="uil uil-arrow-right btn-icon"></i></a>
       </div>
-    </nav>
+    </div>
+    <a href="#clubs" class="header__scroll-btn">
+      <i class="uil uil-mouse-alt"></i>
+    </a>
+  </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1>Tech Clubs</h1>
+  <!-- Clubs Section -->
+  <section id="clubs" class="clubs">
+    <div class="container">
+      <div class="clubs__intro">
+        <h2>Our Tech Clubs</h2>
         <p>
-          Explore our vibrant tech clubs that provide opportunities for students to develop technical skills, 
-          network with industry professionals, and work on exciting projects.
+          At Moi University, we host a variety of technology-focused clubs that cater to different interests and career paths.
+          Each club offers unique opportunities for learning, networking, and hands-on experience in various tech fields.
         </p>
       </div>
-    </section>
 
-    <!-- IEEE Club Section -->
-    <section class="club-section">
-      <div class="club-container">
-        <div class="club-info">
-          <h2>IEEE Student Branch</h2>
-          <p>
-            The IEEE (Institute of Electrical and Electronics Engineers) Student Branch at Moi University 
-            is a technical community dedicated to advancing technology for humanity. Our branch provides 
-            members with opportunities to network with peers and professionals, develop technical and 
-            professional skills, and work on projects that make a difference.
-          </p>
-          <p>
-            We organize workshops, technical talks, competitions, and social events that help members 
-            stay current with emerging technologies and build lasting connections in the engineering field.
-          </p>
-          
-          <div class="chairperson-card">
-            <div class="chairperson-info">
-              <img src="/Assets/images/team2.jpg" alt="IEEE Chairperson" class="chairperson-img">
-              <div>
-                <div class="chairperson-name">Newton</div>
-                <div class="chairperson-title">IEEE Chairperson</div>
-              </div>
-            </div>
-            <p class="chairperson-quote">
-              "IEEE has been instrumental in bridging the gap between classroom learning and real-world 
-              applications. We're committed to fostering innovation and technical excellence among our members."
+      <!-- IEEE Club -->
+      <div class="club-card">
+        <div class="club-card__header">
+          <div class="club-card__bg" style="background-image: url('/Assets/images/IEEE\ logo.jpg')"></div>
+          <div class="club-card__overlay">
+            <h2 class="club-card__title">IEEE Student Branch</h2>
+          </div>
+          <div class="club-card__logo">
+            <img src="/Assets/images/IEEE logo.jpg" alt="IEEE Logo">
+          </div>
+        </div>
+        <div class="club-card__content">
+          <div class="club-card__description">
+            <p>
+              The IEEE (Institute of Electrical and Electronics Engineers) Student Branch at Moi University 
+              is a technical community dedicated to advancing technology for humanity. Our branch provides 
+              members with opportunities to network with peers and professionals, develop technical and 
+              professional skills, and work on projects that make a difference.
+            </p>
+            <p>
+              We organize workshops, technical talks, competitions, and social events that help members 
+              stay current with emerging technologies and build lasting connections in the engineering field.
             </p>
           </div>
+          
+          <div class="club-card__stats">
+            <div class="stat-item">
+              <div class="stat-item__number">50+</div>
+              <div class="stat-item__label">Active Members</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">15+</div>
+              <div class="stat-item__label">Annual Events</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">10+</div>
+              <div class="stat-item__label">Technical Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">5+</div>
+              <div class="stat-item__label">Industry Partners</div>
+            </div>
+          </div>
+          
+          <div class="club-card__chairperson">
+            <div class="chairperson__img-container">
+              <img src="/Assets/images/Chair IEEE.png" alt="IEEE Chairperson" class="chairperson__img">
+            </div>
+            <div class="chairperson__info">
+              <h4 class="chairperson__name">Newton Mark Lijoodi</h4>
+              <div class="chairperson__title">IEEE Chairperson</div>
+              <p class="chairperson__quote">
+                "IEEE has been instrumental in bridging the gap between classroom learning and real-world 
+                applications. We're committed to fostering innovation and technical excellence among our members."
+              </p>
+            </div>
+          </div>
 
-          <div class="club-actions">
-            <a href="apply.html" class="btn btn-primary">Apply Now</a>
-            <a href="https://wa.me/254794728645" class="btn btn-secondary">Learn More</a>
-          </div>
-        </div>
-        
-        <div class="club-logo">
-          <div class="logo-container">
-            <img src="/Assets/images/IEEE logo.jpg" alt="IEEE Logo" class="logo-img">
-          </div>
-          <div class="club-stats">
-            <div class="stat-card">
-              <h4>50+</h4>
-              <p>Active Members</p>
-            </div>
-            <div class="stat-card">
-              <h4>15+</h4>
-              <p>Annual Events</p>
-            </div>
-            <div class="stat-card">
-              <h4>10+</h4>
-              <p>Technical Projects</p>
-            </div>
-            <div class="stat-card">
-              <h4>5+</h4>
-              <p>Industry Partners</p>
-            </div>
+          <div class="club-card__actions">
+            <a href="apply.html" class="btn btn-primary">Apply Now <i class="uil uil-arrow-right btn-icon"></i></a>
+            <a href="https://wa.me/254794728645" class="btn btn-secondary">Learn More <i class="uil uil-info-circle btn-icon"></i></a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- GDG Club Section -->
-    <section class="club-section">
-      <div class="club-container">
-        <div class="club-logo">
-          <div class="logo-container">
-            <img src="/Assets/images/Google Developers logo PNG, vector files free download - Brandlogos_net.jpg" alt="GDG Logo" class="logo-img">
+      <!-- GDG Club -->
+      <div class="club-card">
+        <div class="club-card__header">
+          <div class="club-card__bg" style="background-image: url('/Assets/images/Google\ Developers\ logo\ PNG\,\ vector\ files\ free\ download\ -\ Brandlogos_net.jpg')"></div>
+          <div class="club-card__overlay">
+            <h2 class="club-card__title">Google Developer Group (GDG)</h2>
           </div>
-          <div class="club-stats">
-            <div class="stat-card">
-              <h4>60+</h4>
-              <p>Active Members</p>
-            </div>
-            <div class="stat-card">
-              <h4>12+</h4>
-              <p>Annual Events</p>
-            </div>
-            <div class="stat-card">
-              <h4>8+</h4>
-              <p>Workshops</p>
-            </div>
-            <div class="stat-card">
-              <h4>3+</h4>
-              <p>Hackathons</p>
-            </div>
+          <div class="club-card__logo">
+            <img src="/Assets/images/Google Developers logo PNG, vector files free download - Brandlogos_net.jpg" alt="GDG Logo">
           </div>
         </div>
-        
-        <div class="club-info">
-          <h2>Google Developer Group (GDG)</h2>
-          <p>
-            Google Developer Group (GDG) Moi University is a community of developers interested in Google's 
-            developer technology. From Android, Web, and Google Cloud Platform, to Angular, Machine Learning, 
-            and more, we cover a wide range of technologies.
-          </p>
-          <p>
-            Our mission is to create a space where developers can network, learn, and grow together. 
-            We organize tech talks, workshops, hackathons, and study jams that help members enhance their 
-            skills and stay updated with the latest technologies.
-          </p>
-          
-          <div class="chairperson-card">
-            <div class="chairperson-info">
-              <img src="/Assets/images/Enzeyi.jpg" alt="GDG Chairperson" class="chairperson-img">
-              <div>
-                <div class="chairperson-name">Emannuel Enzeyi</div>
-                <div class="chairperson-title">GDG Chairperson</div>
-              </div>
-            </div>
-            <p class="chairperson-quote">
-              "GDG is more than just a tech club; it's a community where innovation thrives. We're dedicated 
-              to creating an inclusive environment where everyone can learn, share, and grow their technical skills."
+        <div class="club-card__content">
+          <div class="club-card__description">
+            <p>
+              Google Developer Group (GDG) Moi University is a community of developers interested in Google's 
+              developer technology. From Android, Web, and Google Cloud Platform, to Angular, Machine Learning, 
+              and more, we cover a wide range of technologies.
+            </p>
+            <p>
+              Our mission is to create a space where developers can network, learn, and grow together. 
+              We organize tech talks, workshops, hackathons, and study jams that help members enhance their 
+              skills and stay updated with the latest technologies.
             </p>
           </div>
+          
+          <div class="club-card__stats">
+            <div class="stat-item">
+              <div class="stat-item__number">60+</div>
+              <div class="stat-item__label">Active Members</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">12+</div>
+              <div class="stat-item__label">Annual Events</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">8+</div>
+              <div class="stat-item__label">Workshops</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">3+</div>
+              <div class="stat-item__label">Hackathons</div>
+            </div>
+          </div>
+          
+          <div class="club-card__chairperson">
+            <div class="chairperson__img-container">
+              <img src="/Assets/images/Enzeyi.jpg" alt="GDG Chairperson" class="chairperson__img">
+            </div>
+            <div class="chairperson__info">
+              <h4 class="chairperson__name">Emmanuel Enzeyi</h4>
+              <div class="chairperson__title">GDG Chairperson</div>
+              <p class="chairperson__quote">
+                "GDG is more than just a tech club; it's a community where innovation thrives. We're dedicated 
+                to creating an inclusive environment where everyone can learn, share, and grow their technical skills."
+              </p>
+            </div>
+          </div>
 
-          <div class="club-actions">
-            <a href="apply.html" class="btn btn-primary">Apply Now</a>
-            <a href="https://wa.me/254794728645" class="btn btn-secondary">Learn More</a>
+          <div class="club-card__actions">
+            <a href="apply.html" class="btn btn-primary">Apply Now <i class="uil uil-arrow-right btn-icon"></i></a>
+            <a href="https://wa.me/254794728645" class="btn btn-secondary">Learn More <i class="uil uil-info-circle btn-icon"></i></a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Mech-Design Club Section -->
-    <section class="club-section">
-      <div class="club-container">
-        <div class="club-info">
-          <h2>Mech-Design Club</h2>
-          <p>
-            The Mechanical Design Club at Moi University brings together students passionate about mechanical 
-            engineering, CAD design, and innovative problem-solving. We focus on practical applications of 
-            mechanical engineering principles through hands-on projects and design challenges.
-          </p>
-          <p>
-            Our club provides access to industry-standard design software, 3D printing facilities, and 
-            opportunities to work on real-world engineering projects. Members develop crucial skills in 
-            mechanical design, prototyping, and project management.
-          </p>
-          
-          <div class="chairperson-card">
-            <div class="chairperson-info">
-              <img src="/Assets/images/Chair MechDesign.jpg" alt="Mech-Design Chairperson" class="chairperson-img">
-              <div>
-                <div class="chairperson-name">Alex Johnson</div>
-                <div class="chairperson-title">Mech-Design Club Chairperson</div>
-              </div>
-            </div>
-            <p class="chairperson-quote">
-              "Design is the heart of engineering, and at MechDesign, we equip members with the skills to bring ideas to life, fostering innovation ."
+      <!-- Mech-Design Club -->
+      <div class="club-card">
+        <div class="club-card__header">
+          <div class="club-card__bg" style="background-image: url('/Assets/images/Mech\ Design\ logo.jpg')"></div>
+          <div class="club-card__overlay">
+            <h2 class="club-card__title">Mech-Design Club</h2>
+          </div>
+          <div class="club-card__logo">
+            <img src="/Assets/images/Mech Design logo.jpg" alt="Mech-Design Logo">
+          </div>
+        </div>
+        <div class="club-card__content">
+          <div class="club-card__description">
+            <p>
+              The Mechanical Design Club at Moi University brings together students passionate about mechanical 
+              engineering, CAD design, and innovative problem-solving. We focus on practical applications of 
+              mechanical engineering principles through hands-on projects and design challenges.
+            </p>
+            <p>
+              Our club provides access to industry-standard design software, 3D printing facilities, and 
+              opportunities to work on real-world engineering projects. Members develop crucial skills in 
+              mechanical design, prototyping, and project management.
             </p>
           </div>
+          
+          <div class="club-card__stats">
+            <div class="stat-item">
+              <div class="stat-item__number">40+</div>
+              <div class="stat-item__label">Active Members</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">8+</div>
+              <div class="stat-item__label">Design Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">6+</div>
+              <div class="stat-item__label">Competitions</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">4+</div>
+              <div class="stat-item__label">Industry Partners</div>
+            </div>
+          </div>
+          
+          <div class="club-card__chairperson">
+            <div class="chairperson__img-container">
+              <img src="/Assets/images/Chair MechDesign.jpg" alt="Mech-Design Chairperson" class="chairperson__img">
+            </div>
+            <div class="chairperson__info">
+              <h4 class="chairperson__name">Nehemiah Mutethia</h4>
+              <div class="chairperson__title">Mech-Design Club Chairperson</div>
+              <p class="chairperson__quote">
+                "Design is the heart of engineering, and at MechDesign, we equip members with the skills to bring ideas to life, fostering innovation."
+              </p>
+            </div>
+          </div>
 
-          <div class="club-actions">
-            <a href="apply.html" class="btn btn-primary">Apply Now</a>
-            <a href="mech-design.html" class="btn btn-secondary">Learn More</a>
-          </div>
-        </div>
-        
-        <div class="club-logo">
-          <div class="logo-container">
-            <img src="/Assets/images/Mech Design logo.jpg" alt="Mech-Design Logo" class="logo-img">
-          </div>
-          <div class="club-stats">
-            <div class="stat-card">
-              <h4>40+</h4>
-              <p>Active Members</p>
-            </div>
-            <div class="stat-card">
-              <h4>8+</h4>
-              <p>Design Projects</p>
-            </div>
-            <div class="stat-card">
-              <h4>6+</h4>
-              <p>Competitions</p>
-            </div>
-            <div class="stat-card">
-              <h4>4+</h4>
-              <p>Industry Partners</p>
-            </div>
+          <div class="club-card__actions">
+            <a href="apply.html" class="btn btn-primary">Apply Now <i class="uil uil-arrow-right btn-icon"></i></a>
+            <a href="mech-design.html" class="btn btn-secondary">Learn More <i class="uil uil-info-circle btn-icon"></i></a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container footer__container">
-        <div class="footer__1">
-          <a href="index.html" class="footer__logo"><h4>TSA</h4></a>
-          <p>
-            The association is a representation of Moi Universtity school of Engineering. It is a non-profit
-            ,student run, independent & educational organization.
-          </p>
-        </div>
-        <div class="footer__2">
-          <h4>Permalinks</h4>
-          <ul class="permalinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="contact_us.html">Contact Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__3">
-          <h4>Privacy</h4>
-          <ul class="Primacy">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms and Condition</a></li>
-            <li><a href="#">Refund Policy</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__4">
-          <h4>Contact Us</h4>
-          <div>
-            <p>+254700000000</p>
-            <p>technologystudentsmoi@gmail.com</p>
+      <!-- WAAW Foundation Club -->
+      <div class="club-card">
+        <div class="club-card__header">
+          <div class="club-card__bg" style="background-image: url('/Assets/images/WAAW\ logo.jpg')"></div>
+          <div class="club-card__overlay">
+            <h2 class="club-card__title">WAAW Foundation Moi Chapter</h2>
           </div>
-          <ul class="footer__socials">
-            <li>
-              <a href="https://www.facebook.com/moiunitsa/">
-                <i class="uil uil-facebook-f"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh">
-                <i class="uil uil-instagram-alt"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09">
-                <i class="uil uil-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/technology-students-association-835161232">
-                <i class="uil uil-linkedin-alt"></i>
-              </a>
-            </li>
-          </ul>
+          <div class="club-card__logo">
+            <img src="/Assets/images/WAAW logo.jpg" alt="WAAW Logo">
+          </div>
+        </div>
+        <div class="club-card__content">
+          <div class="club-card__description">
+            <p>
+              WAAW Foundation Moi University Chapter is a student-led organization dedicated to empowering African women in STEM through mentorship, outreach programs, and hands-on training. As part of the global Working to Advance STEM Education for African Women (WAAW) Foundation, our chapter actively engages in outreach programs to secondary schools, mentoring and inspiring young girls to pursue STEM careers.
+            </p>
+            <p>
+              We also provide technical training, leadership development, and advocacy initiatives to bridge the gender gap in STEM. Additionally, the global WAAW Foundation offers scholarships to university girls pursuing STEM-related courses. Join us in shaping the future.
+            </p>
+          </div>
+          
+          <div class="club-card__stats">
+            <div class="stat-item">
+              <div class="stat-item__number">40+</div>
+              <div class="stat-item__label">Active Members</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">8+</div>
+              <div class="stat-item__label">Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">6+</div>
+              <div class="stat-item__label">Competitions</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__number">2+</div>
+              <div class="stat-item__label">Industry Partners</div>
+            </div>
+          </div>
+          
+          <div class="club-card__chairperson">
+            <div class="chairperson__img-container">
+              <img src="/Assets/images/Chair WAAW.jpg" alt="WAAW Chairperson" class="chairperson__img">
+            </div>
+            <div class="chairperson__info">
+              <h4 class="chairperson__name">Grace Elizabeth A Oyoo</h4>
+              <div class="chairperson__title">WAAW Foundation Chairperson</div>
+              <p class="chairperson__quote">
+                "Being part of WAAW Foundation has been a transformative experience for me. Through the chapter, I have gained leadership and soft skills by leading outreach programs to mentor young girls in STEM. In 2023, I had the incredible opportunity to attend a fully funded 10-day summit in Cape Town, South Africa, where I received hands-on training in web and mobile app development, robotics, Arduino programming, AI, and ML. WAAW has not only enhanced my technical expertise but also empowered me to inspire and uplift other young women in STEM."
+              </p>
+            </div>
+          </div>
+
+          <div class="club-card__actions">
+            <a href="apply.html" class="btn btn-primary">Apply Now <i class="uil uil-arrow-right btn-icon"></i></a>
+            <a href="#" class="btn btn-secondary">Learn More <i class="uil uil-info-circle btn-icon"></i></a>
+          </div>
         </div>
       </div>
-      <div class="footer__copyright">
-        <small>Copyright &copy; TSA 2025</small>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer__container">
+      <div class="footer__1">
+        <a href="index.html" class="footer__logo">
+          <img src="/Assets/images/TSA logo.jpg" alt="TSA Logo">
+          <h4>TSA</h4>
+        </a>
+        <p class="footer__description">
+          The association is a representation of Moi University school of Engineering. It is a non-profit,
+          student run, independent & educational organization.
+        </p>
       </div>
-    </footer>
+      
+      <div class="footer__2">
+        <h4 class="footer__heading">Permalinks</h4>
+        <ul class="footer__links">
+          <li><a href="index.html"><i class="uil uil-arrow-right"></i> Home</a></li>
+          <li><a href="About.html"><i class="uil uil-arrow-right"></i> About</a></li>
+          <li><a href="contact_us.html"><i class="uil uil-arrow-right"></i> Contact Us</a></li>
+          <li><a href="gallery.html"><i class="uil uil-arrow-right"></i> Gallery</a></li>
+        </ul>
+      </div>
 
-    <script>
-      // Change navbar style on scroll
-      window.addEventListener('scroll', () => {
-        document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
-      });
+      <div class="footer__3">
+        <h4 class="footer__heading">Privacy</h4>
+        <ul class="footer__links">
+          <li><a href="#"><i class="uil uil-arrow-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="uil uil-arrow-right"></i> Terms and Conditions</a></li>
+          <li><a href="#"><i class="uil uil-arrow-right"></i> Refund Policy</a></li>
+        </ul>
+      </div>
 
-      // Show/hide nav menu
-      const menu = document.querySelector(".nav__menu");
-      const menuBtn = document.querySelector("#open-menu-btn");
-      const closeBtn = document.querySelector("#close-menu-btn");
+      <div class="footer__4">
+        <h4 class="footer__heading">Contact Us</h4>
+        <div class="footer__contact">
+          <p><i class="uil uil-phone"></i> +254700000000</p>
+          <p><i class="uil uil-envelope"></i> technologystudentsmoi@gmail.com</p>
+        </div>
+        <ul class="footer__socials">
+          <li>
+            <a href="https://www.facebook.com/moiunitsa/">
+              <i class="uil uil-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh">
+              <i class="uil uil-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09">
+              <i class="uil uil-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/technology-students-association-835161232">
+              <i class="uil uil-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <small>Copyright &copy; TSA 2025</small>
+    </div>
+  </footer>
 
-      menuBtn.addEventListener('click', () => {
-        menu.classList.add('active');
-        closeBtn.style.display = "inline-block";
-        menuBtn.style.display = "none";
-      });
+  <script>
+    // Change navbar style on scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('nav');
+      navbar.classList.toggle('nav-scrolled', window.scrollY > 50);
+    });
 
-      // Close nav menu
-      const closeNav = () => {
-        menu.classList.remove('active');
-        closeBtn.style.display = "none";
-        menuBtn.style.display = "inline-block";
-      };
+    // Mobile navigation toggle
+    const menu = document.querySelector(".nav__menu");
+    const openMenuBtn = document.querySelector("#open-menu-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
 
-      closeBtn.addEventListener('click', closeNav);
+    openMenuBtn.addEventListener('click', () => {
+      menu.classList.add('active');
+      closeMenuBtn.style.display = "inline-block";
+      openMenuBtn.style.display = "none";
+    });
 
-      // Close menu when clicking on a menu item (for mobile)
-      document.querySelectorAll('.nav__menu a').forEach(navItem => {
-        navItem.addEventListener('click', closeNav);
-      });
+    const closeNav = () => {
+      menu.classList.remove('active');
+      closeMenuBtn.style.display = "none";
+      openMenuBtn.style.display = "inline-block";
+    };
 
-      // Add smooth scroll for better UX
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
+    closeMenuBtn.addEventListener('click', closeNav);
+
+    // Close menu when clicking on a menu item (for mobile)
+    document.querySelectorAll('.nav__menu a').forEach(navItem => {
+      navItem.addEventListener('click', closeNav);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+          targetElement.scrollIntoView({
             behavior: 'smooth'
           });
-        });
+        }
       });
+    });
 
-      // Animate stats cards on scroll
-      function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
+    // Animation on scroll with IntersectionObserver
+    document.addEventListener('DOMContentLoaded', () => {
+      if ('IntersectionObserver' in window) {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
 
-      function handleScroll() {
-        document.querySelectorAll('.stat-card').forEach(card => {
-          if (isElementInViewport(card)) {
-            card.style.opacity = '1';
-          }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
+        // Observe stat items and chairperson cards
+        document.querySelectorAll('.stat-item, .club-card__chairperson').forEach(item => {
+          observer.observe(item);
+        });
+      } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        document.querySelectorAll('.stat-item, .club-card__chairperson').forEach(item => {
+          item.classList.add('visible');
         });
       }
+    });
 
-      window.addEventListener('scroll', handleScroll);
-      window.addEventListener('load', handleScroll);
-    </script>
-  </body>
+    // Add staggered delay to stat items
+    document.querySelectorAll('.club-card__stats').forEach(statGroup => {
+      const statItems = statGroup.querySelectorAll('.stat-item');
+      statItems.forEach((item, index) => {
+        item.style.transitionDelay = `${0.1 * index}s`;
+      });
+    });
+
+    // Preload background images
+    function preloadImage(url) {
+      const img = new Image();
+      img.src = url;
+    }
+
+    // Preload club background images
+    preloadImage('/Assets/images/ieee-bg.jpg');
+    preloadImage('/Assets/images/gdg-bg.jpg');
+    preloadImage('/Assets/images/mech-bg.jpg');
+    preloadImage('/Assets/images/waaw-bg.jpg');
+    preloadImage('/Assets/images/header-bg.jpg');
+  </script>
+</body>
 </html>
