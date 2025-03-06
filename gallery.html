@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TSA Website - Gallery</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -28,14 +28,12 @@
             --color-secondary: #692d17;
             --color-secondary-light: #8a3d20;
             --color-gray: #666666;
-            --color-gray-light: #f0f0f0;
             
             --container-width-lg: 85%;
             --container-width-md: 90%;
             --container-width-sm: 94%;
             
-            --transition: all 300ms ease;
-            --transition-slow: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --transition: all 400ms ease;
         }
 
         body {
@@ -43,7 +41,6 @@
             background-color: var(--color-bg1);
             line-height: 1.7;
             color: var(--color-black);
-            overflow-x: hidden;
         }
 
         .container {
@@ -54,17 +51,17 @@
         /* Navbar styling */
         nav {
             background: transparent;
-            width: 100%;
+            width: 100vw;
             height: 5rem;
             position: fixed;
             top: 0;
-            z-index: 100;
+            z-index: 11;
             transition: var(--transition);
         }
 
         .window-scroll {
             background: var(--color-bg2);
-            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
         }
 
         .nav__container {
@@ -97,11 +94,11 @@
         .nav__menu {
             display: flex;
             align-items: center;
-            gap: 3.5rem;
+            gap: 4rem;
         }
 
         .nav__menu a {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--color-secondary);
             transition: var(--transition);
@@ -128,51 +125,18 @@
             width: 100%;
         }
 
-        /* Mobile nav toggle */
-        .nav__toggle-btn {
-            display: none;
-            font-size: 1.5rem;
-            color: var(--color-secondary);
-            cursor: pointer;
-        }
-
         /* Gallery Header Styling */
         .gallery-header {
             margin-top: 6rem;
-            padding: 4rem 0 2rem;
+            padding: 3rem 0 2rem;
             background: linear-gradient(to bottom, var(--color-bg2), var(--color-bg1));
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .gallery-header::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: rgba(198, 13, 10, 0.1);
-            z-index: 0;
-        }
-
-        .gallery-header::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: rgba(105, 45, 23, 0.1);
-            z-index: 0;
         }
 
         .gallery-header h1 {
             color: var(--color-secondary);
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             position: relative;
             display: inline-block;
@@ -184,8 +148,8 @@
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
+            width: 70px;
+            height: 3px;
             background: var(--color-primary);
             border-radius: 2px;
         }
@@ -195,8 +159,6 @@
             margin: 1.5rem auto 0;
             color: var(--color-gray);
             font-size: 1.1rem;
-            position: relative;
-            z-index: 1;
         }
 
         /* Gallery Filters Styling */
@@ -204,11 +166,9 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin: 3rem 0 2rem;
+            margin: 2rem 0;
             flex-wrap: wrap;
             padding: 0 1rem;
-            position: relative;
-            z-index: 2;
         }
 
         .filter-btn {
@@ -221,13 +181,11 @@
             transition: var(--transition);
             border: 2px solid transparent;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            font-size: 0.95rem;
         }
 
         .filter-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-color: var(--color-primary-light);
         }
 
         .filter-btn.active {
@@ -239,38 +197,33 @@
         /* Gallery Container Styling */
         .gallery-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
             padding: 2rem;
             max-width: 1400px;
-            margin: 0 auto 4rem;
+            margin: 0 auto;
         }
 
         .gallery-item {
             position: relative;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: var(--transition-slow);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
             aspect-ratio: 3/2;
             background: var(--color-white);
-            cursor: pointer;
-            transform-origin: center;
-            opacity: 0;
-            transform: translateY(30px);
-            display: none; /* Initially hidden, will be shown by JS */
         }
 
         .gallery-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition-slow);
+            transition: var(--transition);
         }
 
         .gallery-item:hover img {
@@ -282,8 +235,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            padding: 1.8rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 1.5rem;
             color: var(--color-white);
             opacity: 0;
             transform: translateY(1rem);
@@ -296,107 +249,13 @@
         }
 
         .gallery-item-overlay h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
 
         .gallery-item-overlay p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        .gallery-item-category {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--color-primary);
-            color: var(--color-white);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            z-index: 2;
-            opacity: 0;
-            transform: translateX(20px);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-item-category {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Lightbox Styling */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .lightbox.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .lightbox-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
-
-        .lightbox.active .lightbox-content {
-            transform: scale(1);
-        }
-
-        .lightbox-img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 5px;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: var(--color-white);
-            font-size: 2rem;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .lightbox-caption {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: var(--color-white);
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 0 0 5px 5px;
-        }
-
-        .lightbox-caption h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .lightbox-caption p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             opacity: 0.9;
         }
 
@@ -404,7 +263,7 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -412,38 +271,23 @@
             }
         }
 
-        .gallery-item.visible {
+        .gallery-item {
             animation: fadeIn 0.6s ease-out forwards;
-            display: block;
+            opacity: 0;
         }
 
-        /* Empty State */
-        .gallery-empty {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 3rem;
-            background: var(--color-white);
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            display: none;
-        }
-
-        .gallery-empty h3 {
-            color: var(--color-secondary);
-            margin-bottom: 1rem;
-        }
-
-        .gallery-empty p {
-            color: var(--color-gray);
-            max-width: 500px;
-            margin: 0 auto;
-        }
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
 
         /* Footer styling */
         footer {
             background: var(--color-bg2);
             padding-top: 5rem;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             position: relative;
         }
 
@@ -453,7 +297,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 5px;
+            height: 3px;
             background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
         }
 
@@ -464,9 +308,9 @@
         }
 
         .footer__container > div h4 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             color: var(--color-secondary);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             position: relative;
             display: inline-block;
         }
@@ -474,38 +318,26 @@
         .footer__container > div h4::after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: -5px;
             left: 0;
-            width: 40px;
-            height: 3px;
+            width: 30px;
+            height: 2px;
             background: var(--color-primary);
-            border-radius: 2px;
         }
 
         .footer__1 p {
             margin: 0 0 2rem;
             color: var(--color-gray);
-            line-height: 1.8;
-        }
-
-        .footer__logo {
-            display: inline-block;
-            margin-bottom: 1rem;
         }
 
         .footer__logo h4 {
             color: var(--color-primary) !important;
-            font-size: 1.8rem !important;
+            font-size: 1.5rem !important;
             font-weight: 700;
         }
 
         footer ul li {
-            margin-bottom: 1rem;
-            transition: var(--transition);
-        }
-
-        footer ul li:hover {
-            transform: translateX(5px);
+            margin-bottom: 0.7rem;
         }
 
         footer ul li a {
@@ -515,77 +347,32 @@
 
         footer ul li a:hover {
             color: var(--color-primary);
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         .footer__socials {
             display: flex;
-            gap: 1.2rem;
-            font-size: 1.3rem;
+            gap: 1rem;
+            font-size: 1.2rem;
             margin-top: 2rem;
         }
 
         .footer__socials a {
-            background: var(--color-white);
             color: var(--color-secondary);
-            padding: 0.8rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             transition: var(--transition);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
         .footer__socials a:hover {
-            background: var(--color-primary);
-            color: var(--color-white);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .footer__4 p {
-            color: var(--color-gray);
-            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+            transform: translateY(-3px);
         }
 
         .footer__copyright {
             text-align: center;
             margin-top: 4rem;
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
             color: var(--color-gray);
-        }
-
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--color-primary);
-            color: var(--color-white);
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 99;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: var(--transition);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            background: var(--color-secondary);
-            transform: translateY(-5px);
         }
 
         /* Responsive Design */
@@ -595,57 +382,12 @@
             }
 
             .gallery-container {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 2rem;
-                padding: 1.5rem;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
             }
 
             .footer__container {
                 grid-template-columns: 1fr 1fr;
-                gap: 3rem;
-            }
-
-            .gallery-header h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav__menu {
-                gap: 2.5rem;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .nav__menu {
-                position: fixed;
-                top: 5rem;
-                right: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100vh;
-                background: var(--color-white);
-                flex-direction: column;
-                gap: 2rem;
-                padding: 3rem 2rem;
-                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-                transition: var(--transition);
-                z-index: 99;
-            }
-
-            .nav__menu.active {
-                right: 0;
-            }
-
-            .nav__toggle-btn {
-                display: block;
-            }
-
-            .gallery-header h1 {
-                font-size: 2.2rem;
-            }
-
-            .gallery-header p {
-                font-size: 1rem;
-                padding: 0 1rem;
             }
         }
 
@@ -655,7 +397,7 @@
             }
 
             .gallery-header h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .gallery-container {
@@ -664,13 +406,8 @@
             }
 
             .filter-btn {
-                padding: 0.5rem 1.2rem;
-                font-size: 0.85rem;
-            }
-
-            .gallery-filters {
-                gap: 0.7rem;
-                margin: 2rem 0 1.5rem;
+                padding: 0.4rem 1rem;
+                font-size: 0.9rem;
             }
 
             .footer__container {
@@ -691,13 +428,6 @@
             .footer__socials {
                 justify-content: center;
             }
-
-            .back-to-top {
-                bottom: 1rem;
-                right: 1rem;
-                width: 2.5rem;
-                height: 2.5rem;
-            }
         }
     </style>
 </head>
@@ -716,12 +446,9 @@
                 <li><a href="About.html">About Us</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="eventdetails.html">Events</a></li>
-                <li><a href="techclubs.html">Tech Clubs</a></li>
+				<li><a href="techclubs.html">Tech Clubs</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
-            <div class="nav__toggle-btn">
-                <i class="uil uil-bars"></i>
-            </div>
         </div>
     </nav>
 
@@ -744,80 +471,30 @@
 
     <!-- Gallery Section -->
     <section class="gallery-container">
-        <a href="#" class="gallery-item" data-category="events">
-            <span class="gallery-item-category">Event</span>
-            <img src="tsa-gallery/tsa-gallery/images/bg.jpg" alt="TSA Annual Event">
+        <a href="https://photos.app.goo.gl/f1s2ZmL4EUmU7L9A9" target="_blank" class="gallery-item" data-category="events">
+            <img src="tsa-gallery/tsa-gallery/images/bg.jpg" alt="TSA Event">
             <div class="gallery-item-overlay">
                 <h3>TSA Annual Event</h3>
                 <p>Celebrating innovation and technology</p>
             </div>
         </a>
-        <a href="#" class="gallery-item" data-category="workshops">
-            <span class="gallery-item-category">Workshop</span>
+        <a href="https://photos.app.goo.gl/fxDJMzT3L4kvvcE27" target="_blank" class="gallery-item" data-category="workshops">
             <img src="tsa-gallery/tsa-gallery/images/fulls/07.jpg" alt="Technical Workshop">
             <div class="gallery-item-overlay">
                 <h3>Technical Workshop</h3>
                 <p>Hands-on learning experience</p>
             </div>
         </a>
-        <a href="#" class="gallery-item" data-category="competitions">
-            <span class="gallery-item-category">Competition</span>
-            <img src="tsa-gallery/tsa-gallery/images/thumbs/08.jpg" alt="Hackathon">
+
+        <a href="https://photos.app.goo.gl/fxDJMzT3L4kvvcE27" target="_blank" class="gallery-item" data-category="competitions">
+            <img src="tsa-gallery/tsa-gallery/images/thumbs/08.jpg" alt="Technical Workshop">
             <div class="gallery-item-overlay">
                 <h3>Hackathon</h3>
-                <p>Coding competition for innovative solutions</p>
+                <p>Good coding time</p>
             </div>
         </a>
-        <a href="#" class="gallery-item" data-category="projects">
-            <span class="gallery-item-category">Project</span>
-            <img src="/placeholder.svg?height=400&width=600" alt="Student Project">
-            <div class="gallery-item-overlay">
-                <h3>Student Projects</h3>
-                <p>Showcasing innovative engineering solutions</p>
-            </div>
-        </a>
-        <a href="#" class="gallery-item" data-category="events">
-            <span class="gallery-item-category">Event</span>
-            <img src="/placeholder.svg?height=400&width=600" alt="Tech Conference">
-            <div class="gallery-item-overlay">
-                <h3>Tech Conference 2023</h3>
-                <p>Annual technology conference with industry leaders</p>
-            </div>
-        </a>
-        <a href="#" class="gallery-item" data-category="workshops">
-            <span class="gallery-item-category">Workshop</span>
-            <img src="/placeholder.svg?height=400&width=600" alt="Robotics Workshop">
-            <div class="gallery-item-overlay">
-                <h3>Robotics Workshop</h3>
-                <p>Learning the fundamentals of robotics engineering</p>
-            </div>
-        </a>
-
-        <!-- Empty state message -->
-        <div class="gallery-empty">
-            <h3>No items found</h3>
-            <p>There are no gallery items matching your selected filter. Please try another category.</p>
-        </div>
+        <!-- Add more gallery items as needed -->
     </section>
-
-    <!-- Lightbox -->
-    <div class="lightbox">
-        <div class="lightbox-close">
-            <i class="uil uil-times"></i>
-        </div>
-        <div class="lightbox-content">
-            <img src="/placeholder.svg" alt="" class="lightbox-img">
-            <div class="lightbox-caption">
-                <h3></h3>
-                <p></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Back to top button -->
-    <div class="back-to-top">
-        <i class="uil uil-arrow-up"></i>
-    </div>
 
     <!-- Footer -->
     <footer>
@@ -836,8 +513,6 @@
                     <li><a href="About.html">About</a></li>
                     <li><a href="contact_us.html">Contact Us</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="eventdetails.html">Events</a></li>
-                    <li><a href="techclubs.html">Tech Clubs</a></li>
                 </ul>
             </div>
             <div class="footer__3">
@@ -855,10 +530,10 @@
                     <p>technologystudentsmoi@gmail.com</p>
                 </div>
                 <ul class="footer__socials">
-                    <li><a href="https://www.facebook.com/moiunitsa/" aria-label="Facebook"><i class="uil uil-facebook-f"></i></a></li>
-                    <li><a href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh" aria-label="Instagram"><i class="uil uil-instagram-alt"></i></a></li>
-                    <li><a href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09" aria-label="Twitter"><i class="uil uil-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/technology-students-association-835161232" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a></li>
+                    <li><a href="https://www.facebook.com/moiunitsa/"><i class="uil uil-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/invites/contact/?i=rrulay9nlbkh&utm_content=dws1fjh"><i class="uil uil-instagram-alt"></i></a></li>
+                    <li><a href="https://twitter.com/tsa_moiuni?t=U0fWy3GTr-6WXjtT2WylzQ&s=09"><i class="uil uil-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/technology-students-association-835161232"><i class="uil uil-linkedin-alt"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -873,54 +548,10 @@
             document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
         });
 
-        // Mobile navigation toggle
-        const menu = document.querySelector('.nav__menu');
-        const menuBtn = document.querySelector('.nav__toggle-btn');
-        
-        menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            menuBtn.querySelector('i').classList.toggle('uil-bars');
-            menuBtn.querySelector('i').classList.toggle('uil-times');
-        });
-
-        // Close mobile menu when clicking a nav link
-        document.querySelectorAll('.nav__menu a').forEach(navItem => {
-            navItem.addEventListener('click', () => {
-                menu.classList.remove('active');
-                menuBtn.querySelector('i').classList.add('uil-bars');
-                menuBtn.querySelector('i').classList.remove('uil-times');
-            });
-        });
-
         // Gallery Filtering
         const filterButtons = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
-        const emptyState = document.querySelector('.gallery-empty');
 
-        // Function to show items with animation
-        function showItems(items) {
-            items.forEach((item, index) => {
-                setTimeout(() => {
-                    item.classList.add('visible');
-                    item.style.display = 'block';
-                }, index * 100);
-            });
-        }
-
-        // Initialize gallery with animation
-        function initGallery() {
-            galleryItems.forEach((item, index) => {
-                setTimeout(() => {
-                    item.classList.add('visible');
-                    item.style.display = 'block';
-                }, index * 100);
-            });
-        }
-
-        // Call initGallery on page load
-        window.addEventListener('DOMContentLoaded', initGallery);
-
-        // Filter gallery items
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from all buttons
@@ -929,83 +560,22 @@
                 button.classList.add('active');
 
                 const filter = button.getAttribute('data-filter');
-                let visibleItems = [];
 
-                // Reset all items
                 galleryItems.forEach(item => {
-                    item.classList.remove('visible');
-                    item.style.display = 'none';
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 400);
+                    }
                 });
-
-                // Filter items
-                if (filter === 'all') {
-                    visibleItems = [...galleryItems];
-                } else {
-                    visibleItems = [...document.querySelectorAll(`.gallery-item[data-category="${filter}"]`)];
-                }
-
-                // Show empty state if no items match
-                if (visibleItems.length === 0) {
-                    emptyState.style.display = 'block';
-                } else {
-                    emptyState.style.display = 'none';
-                    showItems(visibleItems);
-                }
-            });
-        });
-
-        // Lightbox functionality
-        const lightbox = document.querySelector('.lightbox');
-        const lightboxImg = document.querySelector('.lightbox-img');
-        const lightboxCaption = document.querySelector('.lightbox-caption');
-        const lightboxClose = document.querySelector('.lightbox-close');
-
-        galleryItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                const imgSrc = item.querySelector('img').getAttribute('src');
-                const title = item.querySelector('h3').textContent;
-                const desc = item.querySelector('p').textContent;
-                
-                lightboxImg.setAttribute('src', imgSrc);
-                lightboxImg.setAttribute('alt', title);
-                lightboxCaption.querySelector('h3').textContent = title;
-                lightboxCaption.querySelector('p').textContent = desc;
-                
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        lightboxClose.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-
-        // Close lightbox when clicking outside the image
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Back to top button
-        const backToTopBtn = document.querySelector('.back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
             });
         });
 
@@ -1022,8 +592,9 @@
 
         function handleScroll() {
             galleryItems.forEach(item => {
-                if (isElementInViewport(item) && !item.classList.contains('visible')) {
-                    item.classList.add('visible');
+                if (isElementInViewport(item)) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
                 }
             });
         }
