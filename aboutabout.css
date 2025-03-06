@@ -3,7 +3,21 @@
     width: 100%;
     position: relative;
 
+
 }
+.about__archivements{
+  align-items: center;
+  display: grid;
+  align-items: center;
+  place-items: center;
+  
+}
+.about__archivements-right{
+  place-items: center;
+  align-items: center;
+ 
+}
+
 .about__vision__about {
     position: relative;
     width: 100%;
@@ -16,8 +30,8 @@
     color: white;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center; 
+    align-items: center; 
     text-align: start;
     margin-top: 5rem;
 }
@@ -207,19 +221,24 @@
 }
 /* ============== media queries Tablets ============== */
 @media screen and (max-width: 1024px) {
-    .about__container{
+    /* .about__container{
       grid-template-columns: 1fr;
-    }
+    } */
     .about__archivements {
       margin-top: 2rem;
     }
-    .about__achivements-container {
+    /* .about__achivements-container {
       grid-template-columns: 1fr;
       gap: 4rem;
+    } */
+    .about__Mission{
+      grid-template-columns: 1fr;
     }
+    
     .about__archivements-left {
-      width: 80%;
+      /* width: 8%; */
       margin: 0 auto;
+      margin-top: 10rem;
     }
     .team__container {
       grid-template-columns: repeat(3, 1fr);
@@ -232,6 +251,7 @@
   /* ============== media queries phones ============== */
   
   @media screen and (max-width: 600px) {
+    
     .about__container .about__vision__about{
       grid-template-columns: 1fr;
      }

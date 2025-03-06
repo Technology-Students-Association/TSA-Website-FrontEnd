@@ -3,24 +3,23 @@
 }
 
 .about__achivements-container {
-  display: grid;
+  display: flex;
 
   gap: 5rem;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
 
   height: 100%;
 }
-.about__archivements-left {
-}
+
 
 .about__archivements-right p {
   margin: 1.6rem 0 2.5rem;
 }
 .achivements__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 .achivement__card {
@@ -437,6 +436,15 @@
   .about__achivements-container {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+  .mission__img{
+    height: ;
+  }
+  .about__Mission{
+    grid-template-columns: 1fr 1fr;
+  }
+  .about__mission__about{
+    margin-top:10px;
   }
   .about__archivements-left {
     width: 80%;
