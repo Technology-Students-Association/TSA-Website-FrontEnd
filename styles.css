@@ -156,7 +156,7 @@ nav button {
 .nav__menu {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
 }
 .nav__menu a {
   font-size: 0.9rem;
@@ -203,6 +203,7 @@ header {
 }
 
 .categories__left p {
+  text-align: start;
   margin: 1rem 0 3rem;
 }
 .categories__right {

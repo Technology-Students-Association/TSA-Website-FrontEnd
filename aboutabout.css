@@ -13,7 +13,7 @@
 
   gap: 5rem;
 
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   align-items: center;
 
   height: 100%;
@@ -23,7 +23,7 @@
 }
 .achivements__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 .achivement__card {
@@ -377,10 +377,10 @@
   }
 
   .achivements__cards {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Horizontal arrangement */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
     gap: 1rem;
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-    padding-bottom: 1rem; /* Add space for scrollbar */
+    overflow-x: auto; 
+    padding-bottom: 1rem; 
   }
 
   .achivement__card {
@@ -394,27 +394,87 @@
 }
 
 /* ============== media queries Tablets ============== */
-@media screen and (max-width: 1024px) {
-    .about__container{
-      grid-template-columns: 1fr;
-    }
-    .about__archivements {
-      margin-top: 2rem;
-    }
-    .about__achivements-container {
-      grid-template-columns: 1fr;
-      gap: 4rem;
-    }
-    .about__archivements-left {
-      width: 80%;
-      margin: 0 auto;
-    }
-    .team__container {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .team__member {
-      padding: 1rem;
-    }
+@media (min-width: 600px) and (max-width: 1024px) {
+  .about__archivements {
+    margin-top: 4rem;
+  }
+
+  .about__achivements-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+
+  .achivements__cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .achivement__card {
+    padding: 1rem;
+  }
+
+  .about__vision__about {
+    height: 400px;
+    padding: 20px;
+  }
+
+  .about__vision__about h4 {
+    margin-top: 2rem;
+  }
+
+  .about__vision__about h3 {
+    font-size: 1.8rem;
+  }
+
+  .about__vision__about p {
+    font-size: 1rem;
+  }
+
+  .about__Mission {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 20px;
+  }
+
+  .mission__img {
+    width: 50%;
+    height: auto;
+  }
+
+  .about__mission__about {
+    width: 50%;
+    text-align: start;
+  }
+
+  .about__Values {
+    padding: 20px;
+  }
+  .about__values__about{
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .about__values__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .about__cards {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .team__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .team__member {
+    padding: 1rem;
   }
   
+}
+

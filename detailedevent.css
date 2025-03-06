@@ -231,7 +231,7 @@
 
 @media (max-width: 600px) {
     .event__det {
-        height: 20rem;
+        height: 23rem;
         padding-top: 60px;
     }
 
@@ -241,7 +241,7 @@
         margin-top: 1.5rem;
     }
     .details{
-        margin-top: 1.5rem;
+        margin-top: 3rem;
     }
 
     .event__det__date h2 {
@@ -537,10 +537,10 @@
     height: 60px;
     border-radius: 50%; /* Circular avatar */
     object-fit: cover;
-    margin-right: 15px; /* Space between image and text */
+    margin-right: 15px; 
   }
   
-  /* Content area */
+  
   .content {
     display: flex;
     flex-direction: column;
@@ -548,7 +548,7 @@
     width: 100%;
   }
   
-  /* Name of the user */
+ 
   .name {
     font-size: em;
     font-weight: bold;
