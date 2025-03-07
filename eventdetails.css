@@ -1,48 +1,47 @@
-/* Event Section */
-/* Event Bar Section */
+
 .event_bar {
-  position: relative; /* Ensure child elements are positioned relative to this section */
-  width: 100%; /* Cover the full width of the webpage */
-  height: 100px; /* Relatively small height */
+  position: relative; 
+  width: 100%; 
+  height: 100px; 
   display: flex;
-  align-items: center; /* Center content vertically */
-  overflow: hidden; /* Ensure the background image doesn't overflow */
+  align-items: center; 
+  overflow: hidden; 
   margin-top: 5rem;
   margin-bottom: 3rem;
 }
 
 .event_bar-bg {
-  position: absolute; /* Position the background absolutely within the section */
+  position: absolute; 
   top: 0;
   left: 0;
-  width: 100%; /* Cover the full width */
-  height: 100%; /* Cover the full height */
-  background-image: url(Assets/images/Dinner.jpg); /* Background image */
-  background-size: cover; /* Ensure the image fully fits the section */
-  background-position: center; /* Center the image */
-  z-index: 1; /* Place the background behind other content */
+  width: 100%; 
+  height: 100%;
+  background-image: url(Assets/images/Dinner.jpg); 
+  background-size: cover; 
+  background-position: center; 
+  z-index: 1; 
 }
 
 .event_bar-bg::before {
-  content: ""; /* Add a pseudo-element for the maroon overlay */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: maroon; /* Maroon color overlay */
-  opacity: 0.5; /* Adjust opacity to make the image partially visible */
-  z-index: 2; /* Place the overlay above the background image */
+  background-color: maroon; 
+  opacity: 0.5; 
+  z-index: 2;
 }
 
 .event_bar h2 {
-  position: relative; /* Ensure the h2 is above the background and overlay */
-  z-index: 3; /* Place the h2 above the overlay */
-  color: white; /* White text for contrast */
-  font-weight: bold; /* Bold text */
+  position: relative; 
+  z-index: 3; 
+  color: white; 
+  font-weight: bold; 
   margin-left: 8rem;
   margin-top: 3rem;
-  font-size: 24px; /* Adjust font size as needed */
+  font-size: 24px; 
 }
 .event {
   background: #fdf9ff;
@@ -51,7 +50,7 @@
 
 .event__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Adjusted to 1fr for better flexibility */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -62,13 +61,13 @@
   padding: 0.5px;
   border: 1px solid maroon;
   border-radius: 0.5rem;
-  height: 33rem;
-  overflow: hidden; /* Add overflow hidden for better control */
+  height: 45rem;
+  overflow: hidden; 
 }
 
 .event__image {
-  width: 100%; /* Ensures the image takes the full width */
-  height: auto; /* Maintains the aspect ratio */
+  width: 100%; 
+  height: auto;
   z-index: -1;
 }
 
@@ -130,50 +129,53 @@ a i {
 
 /* ==================== MEDIA QUERIES FOR RESPONSIVENESS ==================== */
 
-/* For Tablets (768px and below) */
 @media (max-width: 1024px) {
   .event__container {
-    grid-template-columns: 1fr; /* Switch to one column */
+    grid-template-columns: 1fr; 
   }
 
   .event__event {
-    height: auto; /* Allow height to adjust based on content */
+    height: auto; 
     padding: 1rem;
   }
 
   .event__date {
-    margin-left: 48rem; /* Adjust date position */
+    margin-left: 48rem; 
     margin-top: -1rem;
   }
 
   .team__event-info h5,
   .team__event-info p {
-    margin-right: 0; /* Reset margins for smaller screens */
+    margin-right: 0; 
   }
   .team__event-info h4 {
     font-weight: normal;
-    /* text-align: center; */
+    
     margin-left: 18.3rem;
   }
   
   .team__event-info a {
-    margin-right: 0; /* Center the "View More" button */
+    margin-right: 0; 
   }
 }
 /* For Mobile Devices (480px and below) */
 @media (max-width: 600px) {
+  .event__event{
+    height: auto;
+    width: auto;
+  }
   .event__date {
-    width: 4rem; /* Smaller date circle */
+    width: 4rem; 
     height: 4rem;
     margin-left: 18rem;
     margin-top: -1rem;
   }
   .team__event-info h5 {
-    margin-right: 20px; /* Adjust text alignment */
+    margin-right: 20px;
   }
 
   .team__event-info p {
-    margin-right: 20px; /* Adjust text alignment */
+    margin-right: 20px; 
   }
   .team__event-info .small{
     margin-left: 6rem;
@@ -187,31 +189,118 @@ a i {
 }
   /* ==================== MEDIA QUERIES FOR RESPONSIVENESS ==================== */
 
-/* For Tablets (768px and below) */
 @media (max-width: 1024px) {
   .event_bar {
-    height: 80px; /* Slightly smaller height for tablets */
+    height: 80px; 
   }
 
   .event_bar h2 {
-    font-size: 20px; /* Slightly smaller font size */
-    margin-top: 2rem; /* Adjust margin top */
-    margin-left: 2rem; /* Adjust margin left */
+    font-size: 20px; 
+    margin-top: 2rem; 
+    margin-left: 2rem;
   }
 }
 
-/* For Mobile Devices (480px and below) */
 @media (max-width: 600px) {
   .event_bar {
-    height: 50px; /* Smaller height for mobile */
+    height: 50px; 
     margin-bottom: 1rem;
   }
 
   .event_bar h2 {
-    font-size: 18px; /* Smaller font size for mobile */
-    margin-top: 3.5rem; /* Adjust margin top */
-    margin-left: 1rem; /* Adjust margin left */
+    font-size: 18px;
+    margin-top: 3.5rem; 
+    margin-left: 1rem; 
+  }
+}
+@media (width:360px) {
+  .event__event{
+    height: auto;
+    width: auto;
+  }
+  .event__date {
+    width: 4rem; 
+    height: 4rem;
+    margin-left: 13rem;
+    margin-top: -1rem;
+  }
+  .team__event-info h5 {
+    margin-right: 20px;
+  }
+
+  .team__event-info p {
+    margin-right: 15px; 
+    
+  }
+  .team__event-info .small{
+    margin-left: 6rem;
+  }
+
+  .team__event-info a {
+    padding: 0.5rem 1.5rem;
+    margin-right: 100px;
+    height: 5px;
   }
 }
 
+@media (width:344px) {
+  .event__event{
+    height: auto;
+    width: auto;
+  }
+  .event__date {
+    width: 4rem; 
+    height: 4rem;
+    margin-left: 12rem;
+    margin-top: -1rem;
+  }
+  .team__event-info h5 {
+    margin-right: 20px;
+  }
+
+  .team__event-info p {
+    margin-right: 15px; 
+    
+  }
+  .team__event-info .small{
+    margin-left: 6rem;
+  }
+
+  .team__event-info a {
+    padding: 0.5rem 1.5rem;
+    margin-right: 100px;
+    height: 5px;
+  }
+  
+}
+@media (width:540px) {
+  .event__event{
+    height: auto;
+    width: auto;
+  }
+  .event__date {
+    width: 4rem; 
+    height: 4rem;
+    margin-left: 20rem;
+    margin-top: -1rem;
+  }
+  .team__event-info h5 {
+    margin-right: 20px;
+  }
+
+  .team__event-info p {
+    margin-right: 15px; 
+    
+  }
+  .team__event-info .small{
+    margin-left: 6rem;
+  }
+
+  .team__event-info a {
+    padding: 0.5rem 1.5rem;
+    margin-right: 100px;
+    height: 5px;
+  }
+  
+}
 

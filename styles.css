@@ -82,7 +82,7 @@ img {
   /* object-fit: cover; */
 }
 a h4 {
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
   font-size: xx-large;
 }
 .tech a {
@@ -134,6 +134,25 @@ nav {
 #open-menu-btn {
   color: #692d17;  
 }
+.tech a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tech img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-primary);
+}
+
+.Logo1 {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
 
 #close-menu-btn {
   color: #692d17;
@@ -156,7 +175,7 @@ nav button {
 .nav__menu {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
 }
 .nav__menu a {
   font-size: 0.9rem;
@@ -203,6 +222,7 @@ header {
 }
 
 .categories__left p {
+  text-align: start;
   margin: 1rem 0 3rem;
 }
 .categories__right {
