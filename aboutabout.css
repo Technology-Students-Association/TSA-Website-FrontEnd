@@ -478,3 +478,128 @@
   
 }
 
+/* Executive Team Section Styles - Enhanced */
+.team {
+  background: #f8ece6;
+  padding: 3rem 0 2rem 0;
+}
+.team h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #c60d0a;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+.team__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  margin-top: 0;
+}
+.team__member {
+  background: #fff7f2;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(198,13,10,0.07);
+  padding: 2.5rem 1.2rem 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #f3d2c1;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  min-width: 220px;
+}
+.team__member:hover {
+  box-shadow: 0 10px 36px rgba(198,13,10,0.13);
+  transform: translateY(-8px) scale(1.04);
+}
+.team__member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  border: 5px solid #f8ece6;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.team__member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.team__member-info h4 {
+  margin: 0.7rem 0 0.25rem 0;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #692d17;
+  text-align: center;
+}
+.team__member-info p {
+  margin: 0;
+  color: #c60d0a;
+  font-size: 1.02rem;
+  text-align: center;
+}
+.team__member-socials {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+  position: static;
+  justify-content: center;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  transform: none;
+}
+.team__member-socials a {
+  color: #692d17;
+  background: #fdf9ff;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.18rem;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid #f3d2c1;
+}
+.team__member-socials a:hover {
+  background: #c60d0a;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .team__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team__member-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .team__container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .team__member {
+    padding: 1.2rem 0.5rem;
+    min-width: 0;
+  }
+  .team__member-image {
+    width: 110px;
+    height: 110px;
+  }
+  .team h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
